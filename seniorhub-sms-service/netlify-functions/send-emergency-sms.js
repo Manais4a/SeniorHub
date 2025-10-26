@@ -253,4 +253,5 @@ function logEmergencyAlert(alertData) {
     // In production, you might want to save this to a database
     // For now, we'll just log it to console
 }
+
 >>>>>>> e8cd80feed65256c582563f2116383709ba50128
