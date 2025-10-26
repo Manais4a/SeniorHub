@@ -7,7 +7,7 @@ This guide provides step-by-step instructions for implementing the enhanced emer
 ## System Architecture
 
 ```
-[Android App] → [Senior Clicks Emergency Button] → [Firebase Database] → [Railway Cloud Function] → [Semaphore API] → [SMS Delivery]
+[Android App] → [Senior Clicks Emergency Button] → [Firebase Database] → [Netlify Functions] → [Semaphore API] → [SMS Delivery]
 ```
 
 ## Features Implemented
@@ -105,26 +105,26 @@ All emergency service buttons have been enhanced to:
 #### 1.3 Update EmergencyService.kt
 Enhanced the `EmergencyService` class to:
 - Create properly formatted SMS messages
-- Integrate with Railway Cloud Function
+- Integrate with Netlify Functions
 - Handle location data properly
 
-### Step 2: Railway Cloud Function Setup
+### Step 2: Netlify Functions Setup
 
-#### 2.1 Create Railway Account
-1. Go to [Railway.app](https://railway.app/)
+#### 2.1 Create Netlify Account
+1. Go to [Netlify.com](https://netlify.com/)
 2. Sign up for a free account
 3. Connect your GitHub account
 
-#### 2.2 Deploy Cloud Function
-1. Create a new project in Railway
-2. Connect your GitHub repository
-3. Deploy the `railway-cloud-function` folder
+#### 2.2 Deploy Netlify Functions
+1. Create a new repository with the `netlify-functions` folder
+2. Connect your GitHub repository to Netlify
+3. Deploy the site with Netlify Functions
 4. Set environment variables (see Step 3)
 
 #### 2.3 Update API URL
 In `EmergencyService.kt`, update the API URL:
 ```kotlin
-private val API_BASE_URL = "https://your-app-name.up.railway.app"
+private val API_BASE_URL = "https://your-site-name.netlify.app"
 ```
 
 ### Step 3: Semaphore SMS API Setup
@@ -137,11 +137,12 @@ private val API_BASE_URL = "https://your-app-name.up.railway.app"
 5. Copy the API key
 
 #### 3.2 Configure Environment Variables
-In your Railway project, set these environment variables:
+In your Netlify site, set these environment variables:
+1. Go to Site settings → Environment variables
+2. Add the following variables:
 ```
 SEMAPHORE_API_KEY=your_semaphore_api_key_here
 SEMAPHORE_SENDER_NAME=SeniorHub
-NODE_ENV=production
 ```
 
 ### Step 4: Firebase Configuration
@@ -234,7 +235,7 @@ The system validates:
 #### 1. SMS Not Sending
 - Check Semaphore API key configuration
 - Verify phone number format
-- Check Railway deployment logs
+- Check Netlify function logs
 
 #### 2. Location Not Available
 - Ensure location permissions are granted
@@ -254,7 +255,7 @@ The system validates:
 ### Debug Steps
 
 1. **Check Logs**: Review Android Studio logs for errors
-2. **Test API**: Use curl to test Railway endpoint
+2. **Test API**: Use curl to test Netlify Functions endpoint
 3. **Verify Permissions**: Ensure all permissions are granted
 4. **Check Network**: Verify internet connectivity
 5. **Test SMS**: Send test SMS manually
@@ -348,4 +349,4 @@ The system validates:
 
 This implementation provides a comprehensive emergency SOS system for senior citizens using the SeniorHub Android application. The system ensures that emergency alerts are sent to designated contacts while simultaneously calling appropriate emergency services, providing peace of mind for both seniors and their families.
 
-The modular architecture allows for easy maintenance and future enhancements, while the cloud-based SMS service ensures reliable message delivery through the Semaphore API platform.
+The modular architecture allows for easy maintenance and future enhancements, while the serverless Netlify Functions ensure reliable message delivery through the Semaphore API platform.

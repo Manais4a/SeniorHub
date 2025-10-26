@@ -38,11 +38,11 @@ class EmergencyService(private val context: Context) {
         private const val COLLECTION_EMERGENCY_ALERTS = "emergency_alerts"
     }
     
-    // Railway Cloud Function URL - Replace with your actual Railway URL
-    private val API_BASE_URL = "https://seniorhub-sms.up.railway.app" // Replace with your actual Railway URL
+    // Netlify Functions URL - Replace with your actual Netlify site URL
+    private val API_BASE_URL = "https://your-site-name.netlify.app" // Replace with your actual Netlify URL
     
     /**
-     * Send emergency alert via Railway API
+     * Send emergency alert via Netlify Functions API
      */
     suspend fun sendEmergencyAlert(
         emergencyType: String,
@@ -76,14 +76,14 @@ class EmergencyService(private val context: Context) {
                     emergencyContactName = user?.getPrimaryEmergencyContact()?.name
                 )
                 
-                // Send SMS via Railway API
+                // Send SMS via Netlify Functions API
                 val apiResult = sendSMSViaAPI(alertData)
                 
                 if (apiResult.success) {
-                    Log.d(TAG, "SMS sent successfully via Railway API")
+                    Log.d(TAG, "SMS sent successfully via Netlify Functions API")
                     Result.Success(true)
                 } else {
-                    Log.e(TAG, "Failed to send SMS via Railway API: ${apiResult.error}")
+                    Log.e(TAG, "Failed to send SMS via Netlify Functions API: ${apiResult.error}")
                     Result.Error(Exception(apiResult.error))
                 }
                 
@@ -95,7 +95,7 @@ class EmergencyService(private val context: Context) {
     }
     
     /**
-     * Send emergency alert for Emergency Services List via Railway API
+     * Send emergency alert for Emergency Services List via Netlify Functions API
      */
     suspend fun sendEmergencyServiceAlert(
         serviceName: String,
@@ -131,14 +131,14 @@ class EmergencyService(private val context: Context) {
                     servicePhone = servicePhone
                 )
                 
-                // Send SMS via Railway API
+                // Send SMS via Netlify Functions API
                 val apiResult = sendSMSViaAPI(alertData)
                 
                 if (apiResult.success) {
-                    Log.d(TAG, "Emergency service SMS sent successfully via Railway API")
+                    Log.d(TAG, "Emergency service SMS sent successfully via Netlify Functions API")
                     Result.Success(true)
                 } else {
-                    Log.e(TAG, "Failed to send emergency service SMS via Railway API: ${apiResult.error}")
+                    Log.e(TAG, "Failed to send emergency service SMS via Netlify Functions API: ${apiResult.error}")
                     Result.Error(Exception(apiResult.error))
                 }
                 
@@ -150,12 +150,12 @@ class EmergencyService(private val context: Context) {
     }
 
     /**
-     * Send SMS via Railway API
+     * Send SMS via Netlify Functions API
      */
     private suspend fun sendSMSViaAPI(alertData: Map<String, Any>): ApiResult {
         return withContext(Dispatchers.IO) {
             try {
-                val url = java.net.URL("$API_BASE_URL/send-emergency-sms")
+                val url = java.net.URL("$API_BASE_URL/.netlify/functions/send-emergency-sms")
                 val connection = url.openConnection() as java.net.HttpURLConnection
                 
                 connection.requestMethod = "POST"
