@@ -1,0 +1,12 @@
+{
+  "name": "seniorhub-sms-service",
+  "version": "1.0.0",
+  "description": "SeniorHub Emergency SMS Service",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
