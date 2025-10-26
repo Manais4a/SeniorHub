@@ -1,0 +1,26 @@
+{
+  "name": "seniorhub-sms-service",
+  "version": "1.0.0",
+  "description": "SeniorHub Emergency SMS Service using Semaphore API on Netlify",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sms",
+    "emergency",
+    "seniorhub",
+    "semaphore",
+    "netlify",
+    "serverless"
+  ],
+  "author": "SeniorHub Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
