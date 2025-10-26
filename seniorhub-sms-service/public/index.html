@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,3 +147,153 @@ https://maps.google.com/?q=7.0731,125.6128</pre>
     </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorHub SMS Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .status {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #c3e6cb;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #6c757d;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .emergency-types {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #ffeaa7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 SeniorHub Emergency SMS Service</h1>
+        
+        <div class="status">
+            <strong>✅ Service Status:</strong> Online and Ready
+        </div>
+        
+        <h2>About This Service</h2>
+        <p>This is the serverless SMS service for the SeniorHub emergency system. It handles emergency alerts sent from the SeniorHub Android application and delivers SMS notifications to emergency contacts via the Semaphore API.</p>
+        
+        <h2>API Endpoint</h2>
+        <div class="endpoint">
+            <strong>POST</strong> <code>/.netlify/functions/send-emergency-sms</code>
+        </div>
+        
+        <h2>System Architecture</h2>
+        <p><code>[Android App] → [Firebase] → [Netlify Functions] → [Semaphore API] → [SMS Delivery]</code></p>
+        
+        <h2>Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">🚨 Emergency SOS alerts</div>
+            <div class="feature-item">📍 Location sharing with Google Maps links</div>
+            <div class="feature-item">📱 SMS delivery to emergency contacts</div>
+            <div class="feature-item">🔄 Automatic retry logic</div>
+            <div class="feature-item">📊 Comprehensive logging</div>
+            <div class="feature-item">🌐 Serverless architecture</div>
+        </div>
+        
+        <h2>Emergency Types Supported</h2>
+        <div class="emergency-types">
+            <ul>
+                <li>SOS Button</li>
+                <li>Davao Doctors Hospital</li>
+                <li>Southern Philippines Medical Center (SPMC)</li>
+                <li>Davao City Police Office (DCPO)</li>
+                <li>Davao City Central Fire Station</li>
+                <li>Central 911 Davao</li>
+                <li>Davao City Ambulance Service</li>
+            </ul>
+        </div>
+        
+        <h2>SMS Message Format</h2>
+        <p>The service sends SMS messages in this format:</p>
+        <div class="endpoint">
+            <pre>🚨 SOS ALERT 🚨
+Emergency Alert: [Senior's Full Name] may need immediate help. Please Try To Reach her/him.
+
+📍 Location: Lat: 7.0731, Lng: 125.6128
+🩺 Emergency Type: SOS Button
+⏰ Timestamp: Dec 15, 2023 at 2:30 PM
+
+🗺️ Click this Google Maps link for exact location:
+https://maps.google.com/?q=7.0731,125.6128</pre>
+        </div>
+        
+        <h2>Testing</h2>
+        <p>Test the function using curl:</p>
+        <div class="endpoint">
+            <pre>curl -X POST https://your-site-name.netlify.app/.netlify/functions/send-emergency-sms \
+  -H "Content-Type: application/json" \
+  -d '{
+    "seniorName": "Test Senior",
+    "emergencyType": "SOS Button",
+    "emergencyContactPhone": "+639123456789",
+    "smsMessage": "🚨 SOS ALERT 🚨\nEmergency Alert: Test Senior may need immediate help..."
+  }'</pre>
+        </div>
+        
+        <div class="footer">
+            <p><strong>SeniorHub Emergency SMS Service v1.0.0</strong></p>
+            <p>Powered by Netlify Functions & Semaphore SMS</p>
+            <p>For support, check the README.md file</p>
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> e8cd80feed65256c582563f2116383709ba50128
