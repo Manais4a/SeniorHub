@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Semaphore SMS API configuration
-const SEMAPHORE_API_KEY = process.env.SEMAPHORE_API_KEY || 'your-semaphore-api-key';
+const SEMAPHORE_API_KEY = process.env.SEMAPHORE_API_KEY || '91ad932344059c070c3e1a70b05b24e6';
 const SEMAPHORE_SENDER_NAME = process.env.SEMAPHORE_SENDER_NAME || 'SeniorHub';
 
 /**
