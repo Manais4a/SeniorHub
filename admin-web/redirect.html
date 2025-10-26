@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorHub Admin - Redirecting...</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%); color: white; }
+        .redirect-container { text-align: center; padding: 24px; }
+        .logo { font-size: 48px; margin-bottom: 12px; }
+        h1 { margin: 0 0 8px; }
+        p { margin: 0 0 16px; opacity: .95; }
+        .spinner { width: 40px; height: 40px; border: 4px solid rgba(255,255,255,.35); border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 12px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .links { margin-top: 16px; }
+        .links a { color: #fff; text-decoration: none; margin: 0 8px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 10px; }
+        .links a:hover { background: rgba(255,255,255,.1); }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">
+            <i class="fas fa-users-cog"></i>
+        </div>
+        <h1>SeniorHub Admin Portal</h1>
+        <p>Redirecting to login page...</p>
+        <div class="spinner"></div>
+        <div class="links">
+            <a href="login.html">Go to Login</a>
+            <a href="index.html">Go to Dashboard</a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect to login page after 2 seconds
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 2000);
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</body>
+</html>

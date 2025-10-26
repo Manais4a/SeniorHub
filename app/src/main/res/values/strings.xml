@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SeniorHub String Resources
+    Contains all string resources for the SeniorHub application
+    Organized by feature and functionality for easy maintenance
+    
+    @author SeniorHub Team
+    @version 1.0.0
+-->
+<resources>
+    <!-- ==========================================================================
+         Application Information
+         ========================================================================== -->
+    <string name="app_name">SeniorHub</string>
+
+    <!-- ==========================================================================
+         Profile and Registration Fields
+         ========================================================================== -->
+    <string name="profile">Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="birthday">Birthday</string>
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="tap_to_change_photo">Tap to change photo</string>
+    <string name="address_information">Address Information</string>
+    <string name="house_number_and_street">House Number and Street</string>
+    <string name="barangay">Barangay</string>
+    <string name="city">City</string>
+    <string name="province">Province</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="membership_information">Membership Information</string>
+    <string name="sss_member">SSS Member</string>
+    <string name="sss_number">SSS Number</string>
+    <string name="gsis_member">GSIS Member</string>
+    <string name="gsis_number">GSIS Number</string>
+    <string name="philhealth_member">PhilHealth Member</string>
+    <string name="philhealth_number">PhilHealth Number</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="account_security">Account Security</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_agree_to_terms">I Agree To The Terms and Conditions</string>
+    <string name="i_agree_terms_bold"><![CDATA[I agree to the <b>Terms</b> and <b>Conditions</b>]]></string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="step_1_of_4">Step 1 of 4</string>
+    <string name="step_2_of_4">Step 2 of 4</string>
+    <string name="step_3_of_4">Step 3 of 4</string>
+    <string name="step_4_of_4">Step 4 of 4</string>
+    <string name="create_account">Create Account</string>
+    <string name="cd_back_to_login">Back to login Button</string>
+    <string name="cd_back_to_main">Back to Main</string>
+
+
+    <!-- ==========================================================================
+         Social Services - Davao City District 1
+         ========================================================================== -->
+    <string name="social_services_intro">Here are Social Services / Offices to District 1 Davao City. Also Included are Contact Details Where Available.</string>
+    <string name="social_services_intro_description">Introduction to social services directory for District 1, Davao City.</string>
+    <string name="additional_social_services_title">Social Services for District 1 (Davao City)</string>
+    <string name="no_services_available">No social services available at the moment. Please check back later or contact support.</string>
+    <string name="service_name_description">Service name</string>
+    <string name="service_address_description">Service address</string>
+    <string name="service_contact_description">Service contact information</string>
+    <string name="services_offered_description">List of services offered by this office</string>
+    <string name="call">Call</string>
+    <string name="map">Map</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="call_button_description">Call this service</string>
+    <string name="map_button_description">Open location in map</string>
+    <string name="email_button_description">Send email to this service</string>
+    <string name="website_button_description">Open service website</string>
+    <string name="no_phone_number_available">No phone number available for this service.</string>
+    <string name="no_address_available">No address available for this service.</string>
+    <string name="no_email_available">No email available for this service.</string>
+    <string name="error_opening_map">Error opening map application.</string>
+    <string name="error_making_call">Error making call.</string>
+    <string name="error_opening_email">Error opening email application.</string>
+    <string name="loading_social_services">Loading social services...</string>
+    <string name="refresh_social_services">Refresh social services list</string>
+    <string name="social_services_list_description">List of social services available in District 1, Davao City. Tap on a service to view details and contact options.</string>
+
+    <!-- Welcome and General -->
+    <string name="welcome_back">Welcome to SeniorHub</string>
+    <string name="welcome_to_seniorhub">Welcome to SeniorHub</string>
+    <string name="loading_datetime" translatable="false">Loading date and time...</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+
+    <!-- Navigation -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="share">Share</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="help">Help</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="view_all">View All</string>
+    <string name="back_to_main">Back to Main</string>
+    <string name="zero">0</string>
+
+    <!-- Emergency Contact Management -->
+    <string name="contact_name">Contact Name</string>
+    <string name="set_as_primary_contact">Set as Primary Contact</string>
+    <string name="set_as_primary">Set as Primary</string>
+    <string name="primary">PRIMARY</string>
+
+    <string name="cd_add_reminder_button">Add reminder</string>
+    <string name="home_screen_desc">Home screen</string>
+    <string name="home">Home</string>
+    <string name="medication_reminders_desc">Medication reminders</string>
+    <string name="reminders_badge">Reminders</string>
+    <string name="your_profile_desc">Your profile</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="settings_accessibility">Settings &amp; Accessibility</string>
+    <string name="accessibility_options">Accessibility Options</string>
+    <string name="voice_assistance">Voice Assistance</string>
+    <string name="voice_assistance_label">Voice Assistance</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="large_text">Large Text</string>
+    <string name="text_customization">Text Customization</string>
+    <string name="font_size">Font Size</string>
+    <string name="open_accessibility_settings">Open Accessibility Settings</string>
+    <string name="reset_all_settings">Reset All Settings</string>
+
+    <!-- Authentication -->
+    <string name="login">Login To SeniorHub</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="email_address">Email Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="age">Age</string>
+    <string name="address">Address</string>
+    <string name="access_code">Access Code</string>
+
+    <!-- Membership and Personal Details -->
+    <string name="marital_status">Marital Status</string>
+
+    <!-- Marital Status Options -->
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="widowed">Widowed</string>
+    <string name="divorced">Divorced</string>
+    <string name="separated">Separated</string>
+    <string name="relationship_to_senior">Relationship to Senior</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login_subtitle">Your Digital Hub for Senior Services</string>
+    <string name="family_portal">Family Portal</string>
+    <string name="family_login_subtitle">Monitor and assist your loved ones</string>
+    <string name="family_login_form_title">Family Member Access</string>
+    <string name="main_login">Main Login</string>
+    <string name="back_to_main_login">Back to Main Login</string>
+    <string name="not_family_member">Not a family member?</string>
+    <string name="quick_access">Quick Access</string>
+    <string name="need_help">Need Help?</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="family_login_help_content">If you need assistance accessing your family member\'s health information or emergency contacts, please contact our support team.</string>
+    <string name="home_subtitle">Your digital companion for daily living</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="back">Back</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="select_language">Select Language</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="or">OR</string>
+
+    <!-- Registration Steps -->
+    <string name="step_indicator">Step %1$d of %2$d</string>
+    <string name="personal_details">Personal Details</string>
+
+    <!-- Core Features -->
+    <string name="emergency_services">Emergency Services</string>
+    <string name="reminders">Seniors Reminders</string>
+    <string name="health_tracking">Health Tracking</string>
+    <string name="health_tracking_desc">Monitor and log your health data</string>
+    <string name="benefits">Senior Benefits</string>
+    <string name="social">Social Services</string>
+    <string name="social_features">Social Features</string>
+    <string name="government_benefits">Government Benefits</string>
+
+    <!-- Feature Subtitles -->
+    <string name="emergency_services_subtitle">Quick access to help</string>
+    <string name="health_subtitle">Monitor your wellness</string>
+    <string name="social_features_subtitle">Connect with your community</string>
+    <string name="tap_in_case_of_emergency">Tap in case of emergency</string>
+    <string name="emergency_assistance">Emergency Assistance</string>
+    <string name="emergency_icon_desc">Emergency assistance icon</string>
+    <string name="emergency_contacts_icon_desc">Emergency contacts icon</string>
+    <string name="health_icon_desc">Health tracking icon</string>
+
+    <!-- Emergency Services -->
+    <string name="emergency">EMERGENCY</string>
+    <string name="sos">SOS</string>
+    <string name="emergency_instructions">Send Emergency Alert To Your Emergency Contact</string>
+    <string name="call_911">Call 911</string>
+    <string name="senior_hotline">Senior Hotline</string>
+    <string name="senior_citizen_emergency_hotline">Senior Citizen Emergency Hotline</string>
+    <string name="emergency_access">Emergency Access</string>
+
+    <!-- Profile -->
+    <string name="my_profile">My Profile</string>
+    <string name="profile_subtitle">Manage your personal information</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="sample_user_name">John Doe</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="verified_account">Verified Account</string>
+    <string name="unverified_account">Unverified Account</string>
+    <string name="verification_status">Verification status</string>
+
+    <!-- Health -->
+    <string name="health">Health Tracking</string>
+    <string name="health_welcome_default">Welcome to Health Tracking</string>
+    <string name="health_welcome">Welcome, %1$s!</string>
+    <string name="health_actions">Health Actions</string>
+    <string name="health_records">Health Records</string>
+    <string name="health_summary">Health Summary</string>
+    <string name="health_summary_format">BP: %1$s | HR: %2$s | BS: %3$s | Weight: %4$s</string>
+    <string name="track_vitals">Track Vitals</string>
+    <string name="vitals">Vitals</string>
+    <string name="medications">Medications</string>
+    <string name="appointments">Appointments</string>
+    <string name="add_health_record">Add Health Record</string>
+    <string name="loading_health_data">Loading health data...</string>
+    <string name="last_checkup_loading">Loading last checkup...</string>
+    <string name="next_appointment_loading">Loading next appointment...</string>
+    <string name="next_appointment_format">Next: %1$s - %2$s</string>
+    <string name="no_upcoming_appointments">No upcoming appointments</string>
+    <string name="appointment_load_error">Could not load appointments</string>
+    <string name="no_health_data_available">No health data available</string>
+    <string name="no_health_records">No health records found</string>
+    <string name="add_first_health_record">Add your first health record</string>
+    <string name="health_good">Good</string>
+    <string name="track_your_health">Track your health</string>
+    <string name="health_monitoring">Health Monitoring</string>
+
+    <!-- Family Portal -->
+    <string name="family_member_name">Your Name</string>
+    <string name="senior_name">Senior\'s Name</string>
+
+    <!-- Family Dashboard -->
+    <string name="monitoring">Monitoring</string>
+    <string name="daily_activities">Daily Activities</string>
+    <string name="previous_day">Previous day</string>
+    <string name="next_day">Next day</string>
+    <string name="all">All</string>
+    <string name="emergencies">Emergencies</string>
+    <string name="activities_list">Activities list</string>
+    <string name="no_activities">No activities to show</string>
+    <string name="activity_count">0 activities</string>
+    <string name="all_activities_filter">Filter: all activities</string>
+    <string name="medications_filter">Filter: medications</string>
+    <string name="emergencies_filter">Filter: emergencies</string>
+
+    <!-- Status Messages -->
+    <string name="weather_pleasant">Pleasant</string>
+    <string name="todays_summary">Today\'s Summary</string>
+
+    <!-- Benefits -->
+    <string name="benefits_subtitle">Explore available government benefits and support programs</string>
+    <string name="benefits_title_upper">SENIOR BENEFITS</string>
+    <string name="benefits_subtitle_long">Track your senior citizen benefits and available services</string>
+    <string name="benefits_summary_upper">BENEFITS SUMMARY</string>
+    <string name="available_benefits_label">Available\nBenefits</string>
+    <string name="claimed_benefits_label">Claimed\nBenefits</string>
+    <string name="monthly_savings_label">Monthly\nSavings</string>
+    <string name="next_disbursement_label">Days to Benefits\nNext Schedule</string>
+    <string name="available_benefits_title_upper">AVAILABLE BENEFITS</string>
+    <string name="claim_benefit_multiline">CLAIM\nBENEFIT</string>
+    <string name="view_history_multiline">VIEW\nHISTORY</string>
+    <string name="cd_no_benefits_icon">No benefits available icon</string>
+    <string name="no_benefits_title">No Benefits Found</string>
+    <string name="no_benefits_description">It looks like there are no benefits listed yet. Add a new benefit to get started!</string>
+    <string name="add_benefit">Add New Benefit</string>
+    <string name="cd_add_benefit_button">Add benefit button</string>
+
+    <string name="back_to_login">Back to login</string>
+
+
+    <!-- Content Descriptions for Accessibility -->
+    <string name="cd_welcome_message">Welcome message</string>
+    <string name="cd_back_button">Back button</string>
+    <string name="cd_voice_assistance">Voice assistance toggle</string>
+    <string name="cd_voice_registration">Voice registration</string>
+    <string name="cd_open_settings">Open settings</string>
+    <string name="cd_logout">Logout</string>
+    <string name="cd_emergency_sos">Emergency SOS button - tap to send alert</string>
+    <string name="cd_emergency_services">Emergency services - tap for help</string>
+    <string name="cd_emergency_icon">Emergency services icon</string>
+    <string name="cd_health_tracking">Health tracking - monitor your wellness</string>
+    <string name="cd_health_icon">Health tracking icon</string>
+    <string name="cd_reminders">Reminders - view your medication and appointment reminders</string>
+    <string name="cd_reminders_icon">Reminders icon</string>
+    <string name="cd_reminder_count">Number of pending reminders</string>
+    <string name="cd_profile">Profile - manage your personal information</string>
+    <string name="cd_profile_icon">Profile icon</string>
+    <string name="cd_profile_image">Profile image</string>
+    <string name="cd_benefits">Benefits - view government benefits and assistance</string>
+    <string name="cd_benefits_icon">Benefits icon</string>
+    <string name="cd_social_features">Social features - connect with family and community</string>
+    <string name="cd_social_icon">Social features icon</string>
+    <string name="cd_seniorhub_logo">SeniorHub logo</string>
+    <string name="cd_call_911_button">Call 911 emergency button</string>
+    <string name="cd_senior_hotline_button">Senior hotline button</string>
+    <string name="cd_emergency_access_button">Emergency access button</string>
+    <string name="cd_health_monitoring_button">Health monitoring button</string>
+    <string name="cd_contact_support_button">Contact support button</string>
+    <string name="cd_emergency_contacts_icon">Emergency contacts icon</string>
+
+    <!-- Error Messages -->
+    <string name="error_name_required">Name is required</string>
+    <string name="error_name_too_short">Name is too short</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_invalid_email">Invalid email format</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_age_required">Age is required</string>
+    <string name="error_invalid_age">Invalid age (must be 18-120)</string>
+    <string name="error_phone_required">Phone number is required</string>
+    <string name="error_invalid_phone">Invalid phone number</string>
+    <string name="error_address_required">Address is required</string>
+    <string name="error_address_too_short">Address is too short</string>
+    <string name="error_emergency_name_required">Emergency contact name is required</string>
+    <string name="error_emergency_phone_required">Emergency contact phone is required</string>
+    <string name="error_relationship_required">Relationship is required</string>
+
+    <!-- Success Messages -->
+    <string name="registration_successful">Registration successful!</string>
+    <string name="profile_updated">Profile updated successfully</string>
+    <string name="settings_saved">Settings saved</string>
+
+    <!-- Additional Social Features -->
+    <string name="add_social_feature">Add Social Feature</string>
+
+    <!-- Missing strings referenced in layouts -->
+    <!-- Main/Home and Cards -->
+    <string name="emergency_services_desc">Emergency services - tap for help</string>
+    <string name="emergency_services_icon">Emergency services icon</string>
+    <string name="reminders_desc">Reminders - view your medication and appointment reminders</string>
+    <string name="reminders_icon">Reminders icon</string>
+    <string name="reminder_count_desc">Number of pending reminders</string>
+    <string name="health_tracking_icon">Health tracking icon</string>
+    <string name="profile_desc">Profile - manage your personal information</string>
+    <string name="profile_icon">Profile icon</string>
+    <string name="benefits_desc">Benefits - view government benefits and assistance</string>
+
+    <!-- Reminders screens -->
+    <string name="reminders_subtitle">Manage and track your reminders</string>
+    <string name="cd_no_reminders_icon">No reminders icon</string>
+    <string name="no_reminders_title">No Reminders Yet</string>
+    <string name="no_reminders_description">You Have No Reminders at the Moment. Add a Reminder to get Started.</string>
+    <string name="reminder_title">Reminder Title</string>
+    <string name="description_optional">Description (optional)</string>
+    <string name="reminder_type">Reminder Type</string>
+    <string name="reminder_icon">Reminder icon</string>
+    <string name="repeat_icon">Repeat icon</string>
+
+    <!-- Health dashboard -->
+    <string name="health_dashboard">Health Dashboard</string>
+    <string name="heart_rate_icon">Heart rate icon</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="blood_pressure_icon">Blood pressure icon</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="blood_oxygen_icon">Blood oxygen icon</string>
+    <string name="blood_oxygen">Blood Oxygen</string>
+    <string name="vitals_icon">Vitals icon</string>
+    <string name="medications_icon">Medications icon</string>
+    <string name="appointments_icon">Appointments icon</string>
+
+    <!-- Accessibility/help content descriptions -->
+    <string name="cd_help_icon">Help icon</string>
+    <!-- Language selection (Redesign additions) -->
+    <string name="language_select_title">SELECT LANGUAGE</string>
+    <string name="language_select_subtitle">Choose your preferred language</string>
+    <string name="available_languages_title">AVAILABLE LANGUAGES</string>
+    <string name="language_english_note">Default language</string>
+    <string name="language_tagalog_note">National language of the Philippines</string>
+    <string name="language_cebuano_note">Language of Cebuano speakers</string>
+    <string name="language_ilocano_note">Language of Ilocano speakers</string>
+    <string name="continue_multiline">CONTINUE</string>
+    <string name="cd_language_selection_icon">Language selection icon</string>
+    <string name="language_english">English</string>
+    <string name="language_tagalog">Tagalog</string>
+    <string name="language_cebuano">Cebuano</string>
+    <string name="language_ilocano">Ilocano</string>
+
+    <!-- Emergency Services (Redesign additions) -->
+    <string name="title_emergency_services_upper">EMERGENCY SERVICES</string>
+    <string name="emergency_services_subtitle_long">Quick access to emergency contacts and services for senior citizens</string>
+    <string name="emergency_alert_title">EMERGENCY ALERT</string>
+    <string name="emergency_alert_subtitle">In case of emergency, call 911 immediately or use the quick call buttons below</string>
+    <string name="quick_call_buttons">QUICK CALL BUTTONS</string>
+    <string name="senior_hotline_multiline">SENIOR\nHOTLINE</string>
+    <string name="emergency_services_directory">EMERGENCY SERVICES DIRECTORY</string>
+
+    <!-- District 1 Emergency Contact Names -->
+    <string name="davao_doctors_hospital">Davao Doctors Hospital</string>
+    <string name="southern_philippines_medical_center">Southern Philippines Medical Center (SPMC)</string>
+    <string name="davao_city_police_office">Davao City Police Office (DCPO)</string>
+    <string name="davao_city_central_fire_station">Davao City Central Fire Station</string>
+    <string name="central_911_davao">Central 911 Davao</string>
+    <string name="world_class_emergency_hotline">911</string>
+
+    <!-- Profile Activity Missing Strings -->
+    <string name="zip_code">Zip Code</string>
+    <string name="blood_type">Blood Type</string>
+    <string name="allergies">Allergies</string>
+    <string name="medical_conditions">Medical Conditions</string>
+    <string name="primary_physician">Primary Physician</string>
+    <string name="physician_phone">Physician Phone</string>
+    <string name="senior_citizen_information">Senior Citizen Information</string>
+    <string name="senior_citizen_id">Senior Citizen ID</string>
+    <string name="philhealth_id">PhilHealth ID</string>
+    <string name="medical_information">Medical Information</string>
+    <string name="choose_your_relationship">Choose your relationship</string>
+    <string name="log_in">Log In</string>
+    <string name="_082_222_8000">(082) 222-8000</string>
+    <string name="_082_227_2731">(082) 227-2731</string>
+    <string name="_082_227_1180">(082) 227-1180</string>
+    <string name="_082_224_3575">(082) 224-3575</string>
+    <string name="district_1_emergency_contacts">District 1 Emergency Contacts</string>
+    <string name="osca_member">OSCA Member</string>
+    <string name="osca_number">OSCA Number</string>
+    <string name="davao_city">Davao City</string>
+    <string name="postal_code_8000">8000</string>
+    <string name="davao_del_sur">Davao Del Sur</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="emergency_contact_name">Emergency Contact Name</string>
+    <string name="emergency_contact_phone">Emergency Contact Phone Number</string>
+    <string name="relationship">Relationship</string>
+
+    <string name="cd_back_to_main_login">Back to main login</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="select_profile_picture">Select Profile Picture</string>
+    <string name="service_count_format">%1$d Service%2$s</string>
+
+    <!-- Enhanced Reminder Strings -->
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="repeat_options">Repeat Options</string>
+    <string name="select_days">Select Days</string>
+    <string name="alert_type">Alert Type</string>
+    <string name="notification">Notification</string>
+    <string name="alarm">Alarm</string>
+    <string name="priority">Priority</string>
+    <string name="repeat_patterns">Repeat Patterns</string>
+    <string name="repeat_none">No Repeat</string>
+    <string name="repeat_daily">Daily</string>
+    <string name="repeat_weekly">Weekly</string>
+    <string name="repeat_monthly">Monthly</string>
+    <string name="repeat_yearly">Yearly</string>
+    <string name="repeat_weekdays">Weekdays Only</string>
+    <string name="repeat_custom">Custom</string>
+    <string name="reminder_saved">Reminder saved successfully</string>
+    <string name="reminder_updated">Reminder updated successfully</string>
+    <string name="reminder_deleted">Reminder Deleted</string>
+    <string name="reminder_toggle_on">Reminder enabled</string>
+    <string name="reminder_toggle_off">Reminder disabled</string>
+    <string name="error_saving_reminder">Error saving reminder</string>
+    <string name="error_loading_reminders">Error loading reminders</string>
+    <string name="confirm_delete_reminder">Are you sure you want to delete this reminder?</string>
+    <string name="edit_reminder">Edit Reminder</string>
+    <string name="delete_reminder">Delete Reminder</string>
+    <string name="snooze_reminder">Snooze</string>
+    <string name="mark_completed">Mark as Completed</string>
+    <string name="reminder_completed">Reminder Completed</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="next_week">Next Week</string>
+    <string name="this_month">This Month</string>
+    <string name="next_month">Next Month</string>
+    <string name="this_year">This Year</string>
+    <string name="next_year">Next Year</string>
+    <string name="every_minute">Every Minute</string>
+    <string name="every_hour">Every Hour</string>
+    <string name="every_day">Every Day</string>
+    <string name="every_week">Every Week</string>
+    <string name="every_month">Every Month</string>
+    <string name="every_year">Every Year</string>
+    <string name="weekdays_only">Weekdays Only</string>
+    <string name="weekends_only">Weekends Only</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="reminder_time_format">%1$s at %2$s</string>
+    <string name="reminder_repeat_format">Repeats %1$s</string>
+    <string name="reminder_due_now">Due now</string>
+    <string name="reminder_due_in">Due in %1$s</string>
+    <string name="reminder_overdue">Overdue by %1$s</string>
+    <string name="minutes_ago">%1$d minutes ago</string>
+    <string name="hours_ago">%1$d hours ago</string>
+    <string name="days_ago">%1$d days ago</string>
+    <string name="minutes_from_now">%1$d minutes from now</string>
+    <string name="hours_from_now">%1$d hours from now</string>
+    <string name="days_from_now">%1$d days from now</string>
+    <string name="alarm_icon">Alarm icon</string>
+    <string name="notification_icon">Notification icon</string>
+    <string name="time_icon">Time icon</string>
+    <string name="priority_high">High Priority</string>
+    <string name="priority_medium">Medium Priority</string>
+    <string name="priority_low">Low Priority</string>
+    <string name="priority_critical">Critical Priority</string>
+    <string name="reminder_medication">Medication Reminder</string>
+    <string name="reminder_appointment">Appointment Reminder</string>
+    <string name="reminder_birthday">Birthday Reminder</string>
+    <string name="reminder_exercise">Exercise Reminder</string>
+    <string name="reminder_meal">Meal Reminder</string>
+    <string name="reminder_health_check">Health Check Reminder</string>
+    <string name="reminder_other">Other Reminder</string>
+    <string name="add_reminder_success">Reminder added successfully</string>
+    <string name="update_reminder_success">Reminder updated successfully</string>
+    <string name="delete_reminder_success">Reminder deleted successfully</string>
+    <string name="reminder_validation_title">Please enter a reminder title</string>
+    <string name="reminder_validation_time">Please select a reminder time</string>
+    <string name="reminder_validation_future">Reminder time must be in the future</string>
+    <string name="reminder_validation_weekly_days">Please select at least one day for weekly reminders</string>
+    <string name="reminder_notification_title">SeniorHub Reminder</string>
+    <string name="reminder_notification_text">Time for your reminder: %1$s</string>
+    <string name="reminder_alarm_title">Reminder Alarm</string>
+    <string name="reminder_alarm_text">%1$s - %2$s</string>
+    <string name="reminder_snooze_5min">Snooze 5 min</string>
+    <string name="reminder_snooze_15min">Snooze 15 min</string>
+    <string name="reminder_snooze_30min">Snooze 30 min</string>
+    <string name="reminder_snooze_1hour">Snooze 1 hour</string>
+    <string name="reminder_dismiss">Dismiss</string>
+    <string name="reminder_complete">Complete</string>
+    <string name="reminder_snooze">Snooze</string>
+    <string name="reminder_edit">Edit</string>
+    <string name="reminder_delete">Delete</string>
+    <string name="reminder_toggle">Toggle Reminder</string>
+    <string name="reminder_active">Active</string>
+    <string name="reminder_inactive">Inactive</string>
+    <string name="reminder_pending">Pending</string>
+    <string name="reminder_snoozed">Snoozed</string>
+    <string name="reminder_cancelled">Cancelled</string>
+    <string name="reminder_failed">Failed</string>
+    <string name="reminder_skipped">Skipped</string>
+    <string name="reminder_rescheduled">Rescheduled</string>
+    <string name="reminder_created">Created</string>
+    <string name="reminder_restored">Restored</string>
+    <string name="reminder_archived">Archived</string>
+    <string name="reminder_unarchived">Unarchived</string>
+    <string name="reminder_duplicated">Duplicated</string>
+    <string name="reminder_shared">Shared</string>
+    <string name="reminder_exported">Exported</string>
+    <string name="reminder_imported">Imported</string>
+    <string name="reminder_synced">Synced</string>
+    <string name="reminder_backed_up">Backed up</string>
+    <string name="reminder_restored_backup">Restored from backup</string>
+    <string name="reminder_cleared">Cleared</string>
+    <string name="reminder_reset">Reset</string>
+    <string name="reminder_refreshed">Refreshed</string>
+    <string name="reminder_loading">Loading reminders...</string>
+    <string name="reminder_saving">Saving reminder...</string>
+    <string name="reminder_updating">Updating reminder...</string>
+    <string name="reminder_deleting">Deleting reminder...</string>
+    <string name="reminder_processing">Processing...</string>
+    <string name="reminder_syncing">Syncing reminders...</string>
+    <string name="reminder_backing_up">Backing up reminders...</string>
+    <string name="reminder_restoring">Restoring reminders...</string>
+    <string name="reminder_exporting">Exporting reminders...</string>
+    <string name="reminder_importing">Importing reminders...</string>
+    <string name="reminder_sharing">Sharing reminder...</string>
+    <string name="reminder_duplicating">Duplicating reminder...</string>
+    <string name="reminder_archiving">Archiving reminder...</string>
+    <string name="reminder_unarchiving">Unarchiving reminder...</string>
+    <string name="reminder_clearing">Clearing reminders...</string>
+    <string name="reminder_resetting">Resetting reminders...</string>
+    <string name="reminder_refreshing">Refreshing reminders...</string>
+    <string name="reminder_loading_error">Error loading reminders</string>
+    <string name="reminder_saving_error">Error saving reminder</string>
+    <string name="reminder_updating_error">Error updating reminder</string>
+    <string name="reminder_deleting_error">Error deleting reminder</string>
+    <string name="reminder_processing_error">Error processing reminder</string>
+    <string name="reminder_syncing_error">Error syncing reminders</string>
+    <string name="reminder_backing_up_error">Error backing up reminders</string>
+    <string name="reminder_restoring_error">Error restoring reminders</string>
+    <string name="reminder_exporting_error">Error exporting reminders</string>
+    <string name="reminder_importing_error">Error importing reminders</string>
+    <string name="reminder_sharing_error">Error sharing reminder</string>
+    <string name="reminder_duplicating_error">Error duplicating reminder</string>
+    <string name="reminder_archiving_error">Error archiving reminder</string>
+    <string name="reminder_unarchiving_error">Error unarchiving reminder</string>
+    <string name="reminder_clearing_error">Error clearing reminders</string>
+    <string name="reminder_resetting_error">Error resetting reminders</string>
+    <string name="reminder_refreshing_error">Error refreshing reminders</string>
+    <string name="reminder_network_error">Network error. Please check your connection.</string>
+    <string name="reminder_permission_error">Permission denied. Please check app permissions.</string>
+    <string name="reminder_storage_error">Storage error. Please check available space.</string>
+    <string name="reminder_timeout_error">Request timeout. Please try again.</string>
+    <string name="reminder_unknown_error">Unknown error occurred. Please try again.</string>
+    <string name="reminder_validation_error">Validation error. Please check your input.</string>
+    <string name="reminder_duplicate_error">Duplicate reminder. Please choose a different time.</string>
+    <string name="reminder_conflict_error">Time conflict. Please choose a different time.</string>
+    <string name="reminder_limit_error">Reminder limit reached. Please delete some reminders first.</string>
+    <string name="reminder_expired_error">Reminder has expired. Please create a new one.</string>
+    <string name="reminder_cancelled_error">Reminder was cancelled. Please try again.</string>
+    <string name="reminder_failed_error">Reminder failed. Please try again.</string>
+    <string name="reminder_skipped_error">Reminder was skipped. Please try again.</string>
+    <string name="reminder_rescheduled_error">Reminder was rescheduled. Please try again.</string>
+    <string name="reminder_created_error">Error creating reminder. Please try again.</string>
+    <string name="reminder_updated_error">Error updating reminder. Please try again.</string>
+    <string name="reminder_deleted_error">Error deleting reminder. Please try again.</string>
+    <string name="reminder_restored_error">Error restoring reminder. Please try again.</string>
+    <string name="reminder_archived_error">Error archiving reminder. Please try again.</string>
+    <string name="reminder_unarchived_error">Error unarchiving reminder. Please try again.</string>
+    <string name="reminder_duplicated_error">Error duplicating reminder. Please try again.</string>
+    <string name="reminder_shared_error">Error sharing reminder. Please try again.</string>
+    <string name="reminder_exported_error">Error exporting reminder. Please try again.</string>
+    <string name="reminder_imported_error">Error importing reminder. Please try again.</string>
+    <string name="reminder_synced_error">Error syncing reminder. Please try again.</string>
+    <string name="reminder_backed_up_error">Error backing up reminder. Please try again.</string>
+    <string name="reminder_restored_backup_error">Error restoring from backup. Please try again.</string>
+    <string name="reminder_cleared_error">Error clearing reminders. Please try again.</string>
+    <string name="reminder_reset_error">Error resetting reminders. Please try again.</string>
+    <string name="reminder_refreshed_error">Error refreshing reminders. Please try again.</string>
+    <string name="reminder_loading_success">Reminders loaded successfully</string>
+    <string name="reminder_saving_success">Reminder saved successfully</string>
+    <string name="reminder_updating_success">Reminder updated successfully</string>
+    <string name="reminder_deleting_success">Reminder deleted successfully</string>
+    <string name="reminder_processing_success">Reminder processed successfully</string>
+    <string name="reminder_syncing_success">Reminders synced successfully</string>
+    <string name="reminder_backing_up_success">Reminders backed up successfully</string>
+    <string name="reminder_restoring_success">Reminders restored successfully</string>
+    <string name="reminder_exporting_success">Reminders exported successfully</string>
+    <string name="reminder_importing_success">Reminders imported successfully</string>
+    <string name="reminder_sharing_success">Reminder shared successfully</string>
+    <string name="reminder_duplicating_success">Reminder duplicated successfully</string>
+    <string name="reminder_archiving_success">Reminder archived successfully</string>
+    <string name="reminder_unarchiving_success">Reminder unarchived successfully</string>
+    <string name="reminder_clearing_success">Reminders cleared successfully</string>
+    <string name="reminder_resetting_success">Reminders reset successfully</string>
+    <string name="reminder_refreshing_success">Reminders refreshed successfully</string>
+    <string name="reminder_network_success">Network connection restored</string>
+    <string name="reminder_permission_success">Permissions granted</string>
+    <string name="reminder_storage_success">Storage available</string>
+    <string name="reminder_timeout_success">Request completed</string>
+    <string name="reminder_unknown_success">Operation completed</string>
+    <string name="reminder_validation_success">Validation passed</string>
+    <string name="reminder_duplicate_success">Duplicate resolved</string>
+    <string name="reminder_conflict_success">Conflict resolved</string>
+    <string name="reminder_limit_success">Limit increased</string>
+    <string name="reminder_expired_success">Expired reminder handled</string>
+    <string name="reminder_cancelled_success">Cancellation processed</string>
+    <string name="reminder_failed_success">Failure handled</string>
+    <string name="reminder_skipped_success">Skip processed</string>
+    <string name="reminder_rescheduled_success">Reschedule processed</string>
+    <string name="reminder_created_success">Reminder created successfully</string>
+    <string name="reminder_updated_success">Reminder updated successfully</string>
+    <string name="reminder_deleted_success">Reminder deleted successfully</string>
+    <string name="reminder_restored_success">Reminder restored successfully</string>
+    <string name="reminder_archived_success">Reminder archived successfully</string>
+    <string name="reminder_unarchived_success">Reminder unarchived successfully</string>
+    <string name="reminder_duplicated_success">Reminder duplicated successfully</string>
+    <string name="reminder_shared_success">Reminder shared successfully</string>
+    <string name="reminder_exported_success">Reminder exported successfully</string>
+    <string name="reminder_imported_success">Reminder imported successfully</string>
+    <string name="reminder_synced_success">Reminder synced successfully</string>
+    <string name="reminder_backed_up_success">Reminder backed up successfully</string>
+    <string name="reminder_restored_backup_success">Reminder restored from backup successfully</string>
+    <string name="reminder_cleared_success">Reminders cleared successfully</string>
+    <string name="reminder_reset_success">Reminders reset successfully</string>
+    <string name="reminder_refreshed_success">Reminders refreshed successfully</string>
+    <string name="seniorhub_conditions_amp_privacy"><![CDATA[
+
+Your Privacy and Safety are our Top Priorities.\n\n
+
+🔒 PRIVACY PROTECTION\n
+• Your Personal Data is Encrypted and Secure\n
+• Health Information is Private To You\n
+• Data is only Shared With your Permission\n\n
+
+🚨 EMERGENCY CONTACTS\n
+• Emergency Contacts are only Notified During Real Emergencies\n
+• Location is Shared only When you use the SOS Button\n
+• Contact Info is Used only for Your Safety\n\n
+
+📋 DATA RETENTION\n
+• Your Data Stays as Long as Your Account is Active\n
+• Emergency Data May be Kept for Safety]]></string>
+
+    <string name="seniorhub_terms_of_use"><![CDATA[
+
+By Using this Application, You Agree to These Terms:\n\n
+
+👤 ACCOUNT REGISTRATION\n
+• Provide Accurate and Complete Information\n
+• Keep your Account Secure\n
+• One Account Per Person\n\n
+
+🔐 PRIVACY & DATA PROTECTION\n
+• We Protect Your Personal Information\n
+• Emergency Contacts Are For Safety Only\n\n
+
+🚨 EMERGENCY SERVICES\n
+• SOS Button Connects To Emergency Services\n
+• Location may be Shared with Emergency Contacts\n\n
+
+✅ USER RESPONSIBILITIES\n
+• Keep Your Information Up to Date\n
+• Use the App Responsibly\n
+• Report Any Technical Issues]]></string>
+    <string name="seniorhub_privacy_policy">SeniorHub Privacy Policy</string>
+    <string name="available_assistance">Available Benefits for District 1 (Davao City)</string>
+    <string name="date_icon" />
+
+</resources>

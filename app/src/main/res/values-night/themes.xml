@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Night theme overrides -->
+    <style name="Theme.SeniorHub" parent="Theme.Material3.DayNight">
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorSurface">@color/dark_background</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/primary_dark</item>
+        <item name="colorSecondary">@color/secondary_light</item>
+        <item name="colorOnSecondary">@color/secondary_dark</item>
+
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+
+        <item name="bottomNavigationStyle">@style/Widget.SeniorHub.BottomNavigationView</item>
+    </style>
+
+    <!-- Component tweaks for night if needed -->
+    <style name="Widget.SeniorHub.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/dark_background</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+</resources>
+
+
+
+

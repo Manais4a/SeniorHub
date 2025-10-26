@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reminder Types -->
+    <string-array name="reminder_types">
+        <item>Medication</item>
+        <item>Appointment</item>
+        <item>Task</item>
+        <item>Birthday</item>
+        <item>Exercise</item>
+        <item>Meal</item>
+        <item>Health Check</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="marital_status_options">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Widowed</item>
+        <item>Divorced</item>
+        <item>Separated</item>
+    </string-array>
+
+    <string-array name="relationship_options">
+        <item>Spouse</item>
+        <item>Child</item>
+        <item>Parent</item>
+        <item>Sibling</item>
+        <item>Grandchild</item>
+        <item>Relative</item>
+        <item>Neighbor</item>
+        <item>Friend</item>
+        <item>Caregiver</item>
+        <item>Guardian</item>
+    </string-array>
+
+    <!-- Repeat Patterns -->
+    <string-array name="repeat_patterns">
+        <item>No Repeat</item>
+        <item>Every Minute</item>
+        <item>Every Hour</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+        <item>Weekdays Only</item>
+        <item>Weekends Only</item>
+        <item>Custom</item>
+    </string-array>
+
+    <!-- Health Log Types -->
+    <string-array name="health_log_types">
+        <item>Blood Pressure</item>
+        <item>Blood Sugar</item>
+        <item>Weight</item>
+        <item>Exercise</item>
+        <item>Medication</item>
+        <item>Temperature</item>
+        <item>Heart Rate</item>
+        <item>Consultation</item>
+    </string-array>
+
+    <!-- Emergency Contact Types -->
+    <string-array name="emergency_contact_types">
+        <item>Family</item>
+        <item>Friend</item>
+        <item>Doctor</item>
+        <item>Police</item>
+        <item>Hospital</item>
+        <item>Fire Department</item>
+        <item>Social Welfare</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Relationship Types -->
+    <string-array name="relationship_types">
+        <item>Spouse</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Son-in-law</item>
+        <item>Daughter-in-law</item>
+        <item>Grandson</item>
+        <item>Granddaughter</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Friend</item>
+        <item>Neighbor</item>
+        <item>Caregiver</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Medication Types -->
+    <string-array name="medication_types">
+        <item>Tablet</item>
+        <item>Capsule</item>
+        <item>Liquid</item>
+        <item>Injection</item>
+        <item>Inhaler</item>
+        <item>Patch</item>
+        <item>Drops</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Medication Frequencies -->
+    <string-array name="medication_frequencies">
+        <item>Once daily</item>
+        <item>Twice daily</item>
+        <item>Three times daily</item>
+        <item>Four times daily</item>
+        <item>Every 6 hours</item>
+        <item>Every 8 hours</item>
+        <item>Every 12 hours</item>
+        <item>As needed</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <!-- Time Periods -->
+    <string-array name="time_periods">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+        <item>Night</item>
+        <item>Before meals</item>
+        <item>After meals</item>
+        <item>At bedtime</item>
+    </string-array>
+
+    <!-- Health Status Levels -->
+    <string-array name="health_status_levels">
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>Critical</item>
+    </string-array>
+
+    <!-- Blood Pressure Categories -->
+    <string-array name="blood_pressure_categories">
+        <item>Normal</item>
+        <item>Elevated</item>
+        <item>High Blood Pressure Stage 1</item>
+        <item>High Blood Pressure Stage 2</item>
+        <item>Hypertensive Crisis</item>
+    </string-array>
+
+    <!-- Blood Sugar Categories -->
+    <string-array name="blood_sugar_categories">
+        <item>Normal</item>
+        <item>Pre-diabetes</item>
+        <item>Diabetes</item>
+        <item>Hypoglycemia</item>
+        <item>Hyperglycemia</item>
+    </string-array>
+
+    <!-- Exercise Types -->
+    <string-array name="exercise_types">
+        <item>Walking</item>
+        <item>Swimming</item>
+        <item>Cycling</item>
+        <item>Yoga</item>
+        <item>Tai Chi</item>
+        <item>Strength Training</item>
+        <item>Stretching</item>
+        <item>Dancing</item>
+        <item>Gardening</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Exercise Intensity -->
+    <string-array name="exercise_intensity">
+        <item>Light</item>
+        <item>Moderate</item>
+        <item>Vigorous</item>
+    </string-array>
+
+    <!-- Appointment Types -->
+    <string-array name="appointment_types">
+        <item>General Checkup</item>
+        <item>Specialist Visit</item>
+        <item>Lab Test</item>
+        <item>X-ray</item>
+        <item>Physical Therapy</item>
+        <item>Dental</item>
+        <item>Eye Exam</item>
+        <item>Hearing Test</item>
+        <item>Vaccination</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Priority Levels -->
+    <string-array name="priority_levels">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Urgent</item>
+    </string-array>
+
+    <!-- Notification Types -->
+    <string-array name="notification_types">
+        <item>Medication Reminder</item>
+        <item>Appointment Reminder</item>
+        <item>Health Check Reminder</item>
+        <item>Emergency Alert</item>
+        <item>Family Update</item>
+        <item>System Notification</item>
+    </string-array>
+
+    <!-- Theme Options -->
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Auto</item>
+        <item>High Contrast</item>
+    </string-array>
+
+    <!-- Font Size Options -->
+    <string-array name="font_size_options">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
+
+    <!-- Language Options -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Filipino</item>
+        <item>Tagalog</item>
+        <item>Cebuano</item>
+        <item>Ilocano</item>
+        <item>Hiligaynon</item>
+        <item>Bicolano</item>
+        <item>Waray</item>
+    </string-array>
+
+    <!-- Days of Week -->
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <!-- Months -->
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- Quick Action Categories -->
+    <string-array name="quick_action_categories">
+        <item>Emergency</item>
+        <item>Health</item>
+        <item>Reminders</item>
+        <item>Profile</item>
+        <item>Benefits</item>
+        <item>Social</item>
+    </string-array>
+
+    <!-- Accessibility Features -->
+    <string-array name="accessibility_features">
+        <item>Voice Assistance</item>
+        <item>Large Text</item>
+        <item>High Contrast</item>
+        <item>Haptic Feedback</item>
+        <item>Screen Reader</item>
+        <item>Magnification</item>
+        <item>Color Inversion</item>
+    </string-array>
+
+    <!-- Government Benefits -->
+    <string-array name="government_benefits">
+        <item>Senior Citizen ID</item>
+        <item>Social Security</item>
+        <item>PhilHealth</item>
+        <item>Pension</item>
+        <item>4Ps (Pantawid Pamilya)</item>
+        <item>Social Amelioration Program</item>
+        <item>Unconditional Cash Transfer</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Health Insurance Types -->
+    <string-array name="health_insurance_types">
+        <item>PhilHealth</item>
+        <item>Private Insurance</item>
+        <item>HMO</item>
+        <item>Government Program</item>
+        <item>None</item>
+    </string-array>
+
+    <!-- Emergency Services -->
+    <string-array name="emergency_services">
+        <item>Police (911)</item>
+        <item>Fire Department (911)</item>
+        <item>Medical Emergency (911)</item>
+        <item>Barangay Emergency</item>
+        <item>Red Cross</item>
+        <item>Coast Guard</item>
+        <item>Custom Emergency</item>
+    </string-array>
+
+    <!-- Social Features -->
+    <string-array name="social_features">
+        <item>Family Chat</item>
+        <item>Photo Sharing</item>
+        <item>Video Call</item>
+        <item>Activity Sharing</item>
+        <item>Community Groups</item>
+        <item>Event Calendar</item>
+        <item>Memory Lane</item>
+    </string-array>
+
+    <!-- Color Options for UI Customization -->
+    <string-array name="color_options">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Yellow</item>
+        <item>Teal</item>
+    </string-array>
+
+    <!-- Icon Styles -->
+    <string-array name="icon_styles">
+        <item>Filled</item>
+        <item>Outlined</item>
+        <item>Rounded</item>
+        <item>Sharp</item>
+    </string-array>
+
+    <!-- Data Export Formats -->
+    <string-array name="export_formats">
+        <item>PDF</item>
+        <item>Excel</item>
+        <item>CSV</item>
+        <item>JSON</item>
+    </string-array>
+
+    <!-- Backup Frequencies -->
+    <string-array name="backup_frequencies">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Manual</item>
+    </string-array>
+
+    <!-- Sync Intervals -->
+    <string-array name="sync_intervals">
+        <item>Real-time</item>
+        <item>Every 5 minutes</item>
+        <item>Every 15 minutes</item>
+        <item>Every hour</item>
+        <item>Every 6 hours</item>
+        <item>Daily</item>
+    </string-array>
+
+    <!-- Davao City Barangays -->
+    <string-array name="davao_barangays">
+        <item>1-A Poblacion</item>
+        <item>2-A Poblacion</item>
+        <item>3-A Poblacion</item>
+        <item>4-A Poblacion</item>
+        <item>5-A Poblacion</item>
+        <item>6-A Poblacion</item>
+        <item>7-A Poblacion</item>
+        <item>8-A Poblacion</item>
+        <item>9-A Poblacion</item>
+        <item>10-A Poblacion</item>
+        <item>11-B Poblacion</item>
+        <item>12-B Poblacion</item>
+        <item>13-B Poblacion</item>
+        <item>14-B Poblacion</item>
+        <item>15-B Poblacion</item>
+        <item>16-B Poblacion</item>
+        <item>17-B Poblacion</item>
+        <item>18-B Poblacion</item>
+        <item>19-B Poblacion</item>
+        <item>20-B Poblacion</item>
+        <item>21-C Poblacion</item>
+        <item>22-C Poblacion</item>
+        <item>23-C Poblacion</item>
+        <item>24-C Poblacion</item>
+        <item>25-C Poblacion</item>
+        <item>26-C Poblacion</item>
+        <item>27-C Poblacion</item>
+        <item>28-C Poblacion</item>
+        <item>29-C Poblacion</item>
+        <item>30-C Poblacion</item>
+        <item>31-D Poblacion</item>
+        <item>32-D Poblacion</item>
+        <item>33-D Poblacion</item>
+        <item>34-D Poblacion</item>
+        <item>35-D Poblacion</item>
+        <item>36-D Poblacion</item>
+        <item>37-D Poblacion</item>
+        <item>38-D Poblacion</item>
+        <item>39-D Poblacion</item>
+        <item>40-D Poblacion</item>
+        <item>Acacia</item>
+        <item>Agdao</item>
+        <item>Alfonso Angliongto Sr.</item>
+        <item>Angalan</item>
+        <item>Atan-Awe</item>
+        <item>Bagong Silang</item>
+        <item>Bago Aplaya</item>
+        <item>Bago Gallera</item>
+        <item>Bago Oshiro</item>
+        <item>Bagong Silang</item>
+        <item>Bajada</item>
+        <item>Balusong</item>
+        <item>Bangkas Heights</item>
+        <item>Barangay 1-A</item>
+        <item>Barangay 2-A</item>
+        <item>Barangay 3-A</item>
+        <item>Barangay 4-A</item>
+        <item>Barangay 5-A</item>
+        <item>Barangay 6-A</item>
+        <item>Barangay 7-A</item>
+        <item>Barangay 8-A</item>
+        <item>Barangay 9-A</item>
+        <item>Barangay 10-A</item>
+        <item>Barangay 11-B</item>
+        <item>Barangay 12-B</item>
+        <item>Barangay 13-B</item>
+        <item>Barangay 14-B</item>
+        <item>Barangay 15-B</item>
+        <item>Barangay 16-B</item>
+        <item>Barangay 17-B</item>
+        <item>Barangay 18-B</item>
+        <item>Barangay 19-B</item>
+        <item>Barangay 20-B</item>
+        <item>Barangay 21-C</item>
+        <item>Barangay 22-C</item>
+        <item>Barangay 23-C</item>
+        <item>Barangay 24-C</item>
+        <item>Barangay 25-C</item>
+        <item>Barangay 26-C</item>
+        <item>Barangay 27-C</item>
+        <item>Barangay 28-C</item>
+        <item>Barangay 29-C</item>
+        <item>Barangay 30-C</item>
+        <item>Barangay 31-D</item>
+        <item>Barangay 32-D</item>
+        <item>Barangay 33-D</item>
+        <item>Barangay 34-D</item>
+        <item>Barangay 35-D</item>
+        <item>Barangay 36-D</item>
+        <item>Barangay 37-D</item>
+        <item>Barangay 38-D</item>
+        <item>Barangay 39-D</item>
+        <item>Barangay 40-D</item>
+        <item>Bucana</item>
+        <item>Buhangin</item>
+        <item>Bunawan</item>
+        <item>Cabantian</item>
+        <item>Calinan</item>
+        <item>Callawa</item>
+        <item>Camansi</item>
+        <item>Catalunan Grande</item>
+        <item>Catalunan Pequeño</item>
+        <item>Central Park</item>
+        <item>Centro</item>
+        <item>Communal</item>
+        <item>Croton</item>
+        <item>Dacudao</item>
+        <item>Daliao</item>
+        <item>Datu Salumay</item>
+        <item>Deca Homes</item>
+        <item>Dumoy</item>
+        <item>Ecoland</item>
+        <item>Eden</item>
+        <item>Fatima</item>
+        <item>Gatungan</item>
+        <item>Gov. Paciano Bangoy</item>
+        <item>Gov. Vicente Duterte</item>
+        <item>Guadalupe</item>
+        <item>Gumalang</item>
+        <item>Hizon</item>
+        <item>Indangan</item>
+        <item>Kabacan</item>
+        <item>Kaligutan</item>
+        <item>Lacson</item>
+        <item>Lamanan</item>
+        <item>Lampianao</item>
+        <item>Lasang</item>
+        <item>Leon Garcia Sr.</item>
+        <item>Lizada</item>
+        <item>Los Amigos</item>
+        <item>Lubogan</item>
+        <item>Lungaog</item>
+        <item>Maa</item>
+        <item>Magtuod</item>
+        <item>Mahayag</item>
+        <item>Malabog</item>
+        <item>Malagos</item>
+        <item>Malibago</item>
+        <item>Mamay</item>
+        <item>Mandug</item>
+        <item>Manuel Guianga</item>
+        <item>Mapula</item>
+        <item>Marapangi</item>
+        <item>Marilog</item>
+        <item>Matina Aplaya</item>
+        <item>Matina Crossing</item>
+        <item>Matina Pangi</item>
+        <item>Mintal</item>
+        <item>Mudiang</item>
+        <item>Mulig</item>
+        <item>New Valencia</item>
+        <item>Pampanga</item>
+        <item>Panacan</item>
+        <item>Pandaitan</item>
+        <item>Panorama</item>
+        <item>Paquibato</item>
+        <item>Paradise Embac</item>
+        <item>Pasian</item>
+        <item>Poblacion</item>
+        <item>Salapawan</item>
+        <item>Saloy</item>
+        <item>San Antonio</item>
+        <item>San Isidro</item>
+        <item>San Jose</item>
+        <item>San Rafael</item>
+        <item>Sasa</item>
+        <item>Sirawan</item>
+        <item>Sto. Niño</item>
+        <item>Suawan</item>
+        <item>Subasta</item>
+        <item>Talomo</item>
+        <item>Talomo River</item>
+        <item>Talomo Proper</item>
+        <item>Talomo River</item>
+        <item>Talomo Proper</item>
+        <item>Tamugan</item>
+        <item>Tibungco</item>
+        <item>Tigatto</item>
+        <item>Tugbok</item>
+        <item>Ula</item>
+        <item>Vicente Hizon Sr.</item>
+        <item>Waan</item>
+        <item>Wangan</item>
+        <item>Wilfredo Aquino</item>
+        <item>Wines</item>
+        <item>Yakal</item>
+    </string-array>
+</resources>

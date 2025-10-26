@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorHub Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/analytics.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="minimal-theme royal-blue">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p id="loadingStatus" style="font-size: 14px; margin-top: 10px; opacity: 0.8;">Checking authentication...</p>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="main-app">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-users-cog"></i>
+                    <span>SeniorHub Admin</span>
+                </div>
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img id="userAvatar" src="https://ui-avatars.com/api/?name=Admin+User&background=007bff&color=fff&size=40" alt="User Avatar" />
+                    <div class="user-status" id="userStatus"></div>
+                </div>
+                <div class="user-details">
+                    <span class="user-name" id="userName">Admin User</span>
+                    <span class="user-role" id="userRole">Facilitator Admin</span>
+                    <span class="user-email" id="userEmail">admin@seniorhub.com</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <!-- Facilitator navigation order -->
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#seniors" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Senior Citizens Management</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#emergency" class="nav-link">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Emergency Alerts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#health" class="nav-link">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#benefits" class="nav-link">
+                        <i class="fas fa-gift"></i>
+                        <span>Benefits</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#social-services" class="nav-link">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Social Services</span>
+                    </a>
+                </li>
+                <!-- Super admin items remain accessible when role matches -->
+                <li class="nav-item">
+                    <a href="#reports" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <p id="pageSubtitle">Welcome to SeniorHub Admin Portal</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                    </div>
+                    <div class="user-menu">
+                        <button class="user-menu-btn" onclick="toggleUserMenu()">
+                            <img id="headerUserAvatar" src="https://ui-avatars.com/api/?name=Admin+User&background=007bff&color=fff&size=32" alt="User Avatar" />
+                            <span id="headerUserName">Admin User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="user-menu-dropdown" id="userMenuDropdown">
+                            <div class="user-menu-header">
+                                <img id="dropdownUserAvatar" src="https://ui-avatars.com/api/?name=Admin+User&background=007bff&color=fff&size=48" alt="User Avatar" />
+                                <div class="user-menu-info">
+                                    <div class="user-menu-name" id="dropdownUserName">Admin User</div>
+                                    <div class="user-menu-role" id="dropdownUserRole">Facilitator Admin</div>
+                                    <div class="user-menu-email" id="dropdownUserEmail">admin@seniorhub.com</div>
+                                </div>
+                            </div>
+                            <div class="user-menu-divider"></div>
+                            <div class="user-menu-items">
+                                <a href="#" class="user-menu-item" onclick="openProfileModal()">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </div>
+                            <div class="user-menu-divider"></div>
+                            <div class="user-menu-items">
+                                <a href="#" class="user-menu-item logout-item" onclick="handleLogout()">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content-container">
+                <!-- Dashboard Section -->
+                <section id="dashboardSection" class="content-section">
+                    <!-- Dashboard Header -->
+                
+
+
+                    <!-- Analytics Content moved from Analytics Section -->
+                    <!-- KPI Cards -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="kpi-value" id="totalSeniorsKPI">0</div>
+                            <div class="kpi-label">Total Seniors</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="kpi-value" id="verifiedAccountsKPI">0</div>
+                            <div class="kpi-label">Verified Accounts</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="kpi-value" id="totalBenefitsKPI">0</div>
+                            <div class="kpi-label">Available Benefits</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="kpi-value" id="emergencyAlertsKPI">0</div>
+                            <div class="kpi-label">Emergency Alerts</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Charts Grid -->
+                    <div class="analytics-grid">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3><i class="fas fa-chart-pie"></i> Senior Demographics</h3>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="demographicsChart"></canvas>
+                            </div>
+                            <div class="chart-legend" id="demographicsLegend"></div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3><i class="fas fa-venus-mars"></i> Gender Distribution</h3>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="genderChart"></canvas>
+                            </div>
+                            <div class="chart-legend" id="genderLegend"></div>
+                        </div>
+                        
+                        
+                    </div>
+
+
+                </section>
+
+                <!-- Senior Citizens Section -->
+                <section id="seniorsSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Senior Citizens Management</h2>
+                        <div class="section-actions">
+                            <button class="btn btn-primary" onclick="openAddSeniorModal()">
+                                <i class="fas fa-plus"></i>
+                                Add New Senior
+                            </button>
+                            <button class="btn btn-secondary" onclick="exportSeniorsData()">
+                                <i class="fas fa-download"></i>
+                                Export Data
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <input type="text" id="seniorSearch" placeholder="Search Seniors..." class="search-input">
+                        <select id="seniorFilter" class="filter-select">
+                            <option value="">All Seniors</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="verified">Verified</option>
+                            <option value="unverified">Unverified</option>
+                            <option value="new">New This Month</option>
+                        </select>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Contact</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th>Verification</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="seniorsTableBody">
+                                <!-- Senior data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Data Collection Section -->
+                <section id="data-collectionSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Data Collection Forms</h2>
+                        <p>Collect and update senior citizen information</p>
+                    </div>
+                    
+                    <div class="forms-grid">
+                        <div class="form-card" onclick="openDataForm('personal')">
+                            <div class="form-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Personal Information</h3>
+                            <p>Basic personal details and contact information</p>
+                        </div>
+                        <div class="form-card" onclick="openDataForm('health')">
+                            <div class="form-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Health Information</h3>
+                            <p>Medical conditions, medications, and health history</p>
+                        </div>
+                        <div class="form-card" onclick="openDataForm('emergency')">
+                            <div class="form-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Emergency Contacts</h3>
+                            <p>Emergency contact information and preferences</p>
+                        </div>
+                        <div class="form-card" onclick="openDataForm('benefits')">
+                            <div class="form-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h3>Benefits Assessment</h3>
+                            <p>Government benefits and assistance programs</p>
+                        </div>
+                        <div class="form-card" onclick="openDataForm('social')">
+                            <div class="form-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Social Information</h3>
+                            <p>Family members, social activities, and preferences</p>
+                        </div>
+                        <div class="form-card" onclick="openDataForm('accessibility')">
+                            <div class="form-icon">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <h3>Accessibility Needs</h3>
+                            <p>Special needs and accessibility requirements</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benefits Section -->
+                <section id="benefitsSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Benefits Management</h2>
+                        <p>Manage government benefits and assistance programs</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" onclick="benefitsManager.openAddBenefitModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Benefit
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Active</th>
+                                    <th>Benefits Next Schedule</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="benefitsTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Appointments Section -->
+                <section id="appointmentsSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Appointments</h2>
+                        <p>Schedule and manage appointments</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" onclick="appointmentsManager.openAddAppointmentModal()">
+                            <i class="fas fa-calendar-plus"></i>
+                            Add Appointment
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>With</th>
+                                    <th>Date & Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointmentsTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+
+                <!-- Admin Management Section (Super Admin Only) -->
+                <section id="adminManagementSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Admin Management</h2>
+                        <div class="section-actions super-admin-only">
+                            <button class="btn btn-primary" onclick="adminManager.openAddAdminModal()">
+                                <i class="fas fa-user-plus"></i>
+                                Add New Admin
+                            </button>
+                            <button class="btn btn-secondary" onclick="adminManager.refreshAdminData()">
+                                <i class="fas fa-sync-alt"></i>
+                                Refresh Data
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters-bar">
+                        <input type="text" id="adminSearch" placeholder="Search Admins..." class="search-input">
+                        <select id="adminFilter" class="filter-select">
+                            <option value="">All Admins</option>
+                            <option value="super_admin">Super Admins</option>
+                            <option value="facilitator">Facilitators</option>
+                            <option value="admin">Admins</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Department</th>
+                                    <th>Status</th>
+                                    <th>Last Login</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTableBody">
+                                <!-- Admin data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Reports Section (Super Admin Only) -->
+                <section id="reportsSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>System Reports</h2>
+                        <p>Generate comprehensive reports and analytics</p>
+                        <div class="section-actions super-admin-only">
+                            <button class="btn btn-primary" onclick="reportsManager.generateSystemReport()">
+                                <i class="fas fa-file-alt"></i>
+                                Generate System Report
+                            </button>
+                            <button class="btn btn-secondary" onclick="reportsManager.exportAllData()">
+                                <i class="fas fa-download"></i>
+                                Export All Data
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Report Types -->
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>User Analytics</h3>
+                                <p>Senior citizens demographics and activity reports</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generateUserReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>Health Reports</h3>
+                                <p>Health records and medical data analytics</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generateHealthReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>Emergency Reports</h3>
+                                <p>Emergency alerts and response analytics</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generateEmergencyReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>Benefits Reports</h3>
+                                <p>Benefits usage and distribution analytics</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generateBenefitsReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>Social Services Reports</h3>
+                                <p>Social services utilization and impact reports</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generateSocialReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="report-card">
+                            <div class="report-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="report-content">
+                                <h3>System Performance</h3>
+                                <p>System usage, performance, and maintenance reports</p>
+                                <button class="btn btn-outline" onclick="reportsManager.generatePerformanceReport()">
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Reports -->
+                    <div class="recent-reports">
+                        <h3>Recent Reports</h3>
+                        <div class="reports-list" id="recentReportsList">
+                            <!-- Recent reports will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Health Section -->
+                <section id="healthSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Health Records</h2>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" onclick="healthManager.openAddHealthModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Health Record
+                        </button>
+                        <button class="btn btn-secondary" onclick="healthManager.refreshHealthData()">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh Data
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">Senior Name</th>
+                                    <th colspan="4">Health Type</th>
+                                    <th rowspan="2">Date</th>
+                                    <th rowspan="2">Time</th>
+                                    <th rowspan="2">Action</th>
+                                </tr>
+                                <tr>
+                                    <th>Blood Pressure</th>
+                                    <th>Sugar Level</th>
+                                    <th>Weight</th>
+                                    <th>Heart Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody id="healthTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Social Services Section -->
+                <section id="social-servicesSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Social Services</h2>
+                        <p>Government and community services directory</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" onclick="socialServicesManager.openAddServiceModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Service
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Service Type</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Priority</th>
+                                    <th>Active</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="socialServicesTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Emergency Alerts Section -->
+                <section id="emergencySection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Emergency Alerts</h2>
+                
+                    </div>
+                    <!-- Emergency Alerts -->
+                    <div class="section-actions facilitator-only" style="margin-bottom: 1rem;">
+                        <button class="btn btn-primary" onclick="emergencyAlertsManager.openAddAlertModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Emergency Alert
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Senior Citizen</th>
+                                    <th>Emergency Service</th>
+                                    <th>Senior's Address</th>
+                                    <th>Timestamp</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="emergencyAlertsTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Debug Section (for testing) -->
+                <section id="debugSection" class="content-section hidden">
+                    <div class="section-header">
+                        <h2>Debug & Sample Data</h2>
+                        <p>Create sample data for testing purposes</p>
+                    </div>
+                    <div class="debug-actions">
+                        
+                        <button class="btn btn-primary" onclick="createSampleEmergencyAlerts()">
+                            <i class="fas fa-bell"></i>
+                            Create Sample Emergency Alerts
+                        </button>
+                        <button class="btn btn-primary" onclick="createSampleHealthRecords()">
+                            <i class="fas fa-plus"></i>
+                            Create Sample Health Records
+                        </button>
+                        <button class="btn btn-primary" onclick="createSampleBenefits()">
+                            <i class="fas fa-plus"></i>
+                            Create Sample Benefits
+                        </button>
+                        <button class="btn btn-success" onclick="createDavaoCityBenefits()">
+                            <i class="fas fa-city"></i>
+                            Create Davao City Senior Assistance
+                        </button>
+                        <button class="btn btn-primary" onclick="createSampleSocialServices()">
+                            <i class="fas fa-plus"></i>
+                            Create Sample Social Services
+                        </button>
+                        <button class="btn btn-info" onclick="testEmailAvailability()">
+                            <i class="fas fa-envelope"></i>
+                            Test Email Availability
+                        </button>
+                        <button class="btn btn-success" onclick="createTestSenior()">
+                            <i class="fas fa-user-plus"></i>
+                            Create Test Senior
+                        </button>
+                    </div>
+                    <div class="debug-info">
+                        <h3>Current Data Status:</h3>
+                        <div id="dataStatus">
+                            
+                            <p>Health Records: <span id="healthCount">Loading...</span></p>
+                            <p>Benefits: <span id="benefitsCount">Loading...</span></p>
+                            <p>Social Services: <span id="socialCount">Loading...</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Other sections will be added here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal Title</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/firebase-config.js?v=2"></script>
+    <script src="js/cloudinary-config.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/seniors.js?v=4"></script>
+    <script src="js/data-collection.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/health.js"></script>
+    <script src="js/admin-manager.js"></script>
+    <script src="js/reports-manager.js"></script>
+    <script src="js/social-services.js"></script>
+    
+    <script src="js/emergency-alerts.js"></script>
+    <script src="js/benefits.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/sample-data.js"></script>
+    <script src="js/main.js"></script>
+    
+    <style>
+        /* Welcome notification animations */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        /* Reports Section Styles */
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e1e5e9;
+            transition: all 0.3s ease;
+        }
+
+        .report-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .report-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .report-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .report-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .report-content p {
+            margin: 0 0 1rem 0;
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .recent-reports {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e1e5e9;
+        }
+
+        .recent-reports h3 {
+            margin: 0 0 1rem 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+
+        .report-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .report-item:hover {
+            background: #f8f9fa;
+            border-color: #007bff;
+        }
+
+        .report-info h4 {
+            margin: 0 0 0.25rem 0;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+
+        .report-info p {
+            margin: 0 0 0.25rem 0;
+            color: #6c757d;
+            font-size: 0.85rem;
+        }
+
+        .report-info small {
+            color: #6c757d;
+            font-size: 0.75rem;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+            padding: 0.375rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-danger {
+            color: #dc3545 !important;
+        }
+
+        /* Senior Demographics Styles */
+        .demographics-content {
+            padding: 1rem 0;
+        }
+
+
+        .demographics-overview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .overview-item {
+            text-align: center;
+        }
+
+        .overview-label {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .overview-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .demographics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .demographic-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e1e5e9;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f8f9fa;
+        }
+
+        .section-header h4 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-header h4 i {
+            color: #007bff;
+        }
+
+        .section-total {
+            font-size: 0.85rem;
+            color: #6c757d;
+            background: #f8f9fa;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .demographic-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .demographic-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .demographic-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .demographic-label {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .demographic-count {
+            font-weight: 600;
+            color: #007bff;
+            font-size: 0.9rem;
+        }
+
+        .demographic-bar {
+            height: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .demographic-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .demographics-summary {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .summary-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-item i {
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        .summary-item span {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Card header styles */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f8f9fa;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-header h3 i {
+            color: #007bff;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 0.375rem 0.75rem;
+            font-size: 0.875rem;
+            border-radius: 6px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .demographics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .overview-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .demographics-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</body>
+</html>

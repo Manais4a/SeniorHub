@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/space_lg">
+
+    <!-- Contact Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContactName"
+        style="@style/Widget.SeniorHub.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_md"
+        android:hint="@string/contact_name"
+        app:startIconDrawable="@drawable/ic_profile"
+        app:startIconTint="@color/focus_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingStart="45dp"
+            android:textSize="@dimen/text_body_large" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Relationship -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContactRelationship"
+        style="@style/Widget.SeniorHub.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_md"
+        android:hint="@string/relationship"
+        android:viewportWidth="24"
+        android:viewportHeight="24"
+
+        app:startIconTint="@color/focus_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContactRelationship"
+            android:layout_width="431dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:paddingStart="45dp"
+            android:textSize="@dimen/text_body_large" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Phone -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContactPhone"
+        style="@style/Widget.SeniorHub.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_md"
+        android:hint="@string/phone_number"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/focus_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:paddingStart="45dp"
+            android:textSize="@dimen/text_body_large" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContactEmail"
+        style="@style/Widget.SeniorHub.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_md"
+        android:hint="@string/email_address"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/focus_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContactEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:paddingStart="45dp"
+            android:textSize="@dimen/text_body_large" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Address -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContactAddress"
+        style="@style/Widget.SeniorHub.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_md"
+        android:hint="@string/address"
+        app:startIconDrawable="@drawable/ic_home"
+        app:startIconTint="@color/focus_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContactAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:paddingStart="45dp"
+            android:textSize="@dimen/text_body_large" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Primary Contact Checkbox -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbIsPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:text="@string/set_as_primary_contact"
+        android:textSize="@dimen/text_body_large"
+        app:buttonTint="@color/focus_blue" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+{
+  "name": "seniorhub-sms-service",
+  "version": "1.0.0",
+  "description": "SeniorHub Emergency SMS Service using Semaphore API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sms",
+    "emergency",
+    "seniorhub",
+    "semaphore",
+    "railway"
+  ],
+  "author": "SeniorHub Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

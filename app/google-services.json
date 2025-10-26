@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "895180010431",
+    "firebase_url": "https://seniorhub-admin-508eb-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "seniorhub-admin-508eb",
+    "storage_bucket": "seniorhub-admin-508eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895180010431:android:dbca0e07b2076d09b8a70a",
+        "android_client_info": {
+          "package_name": "com.seniorhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH6-yp1Nu8qluP-MaHZcqBukZm84osGMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

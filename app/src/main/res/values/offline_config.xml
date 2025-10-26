@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Offline Mode Configuration -->
+    
+    <!-- Offline Data Cache Settings -->
+    <integer name="offline_cache_duration_hours">24</integer>
+    <integer name="offline_max_cache_size_mb">50</integer>
+    <integer name="offline_sync_interval_minutes">30</integer>
+    
+    <!-- Offline Features -->
+    <bool name="offline_emergency_services">true</bool>
+    <bool name="offline_health_logging">true</bool>
+    <bool name="offline_benefits_tracking">true</bool>
+    <bool name="offline_profile_management">true</bool>
+    <bool name="offline_social_features">false</bool>
+    <bool name="offline_voice_assistance">true</bool>
+    
+    <!-- Offline Data Priorities -->
+    <string-array name="offline_priority_data">
+        <item>emergency_contacts</item>
+        <item>user_profile</item>
+        <item>health_records</item>
+        <item>benefits_info</item>
+        <item>medication_reminders</item>
+        <item>emergency_services</item>
+    </string-array>
+    
+    <!-- Offline Sync Settings -->
+    <string name="offline_sync_server_url">https://seniorhub-api.com/sync</string>
+    <integer name="offline_sync_retry_attempts">3</integer>
+    <integer name="offline_sync_timeout_seconds">30</integer>
+    
+    <!-- Offline Storage Paths -->
+    <string name="offline_data_path">/data/data/com.seniorhub.app/offline/</string>
+    <string name="offline_cache_path">/data/data/com.seniorhub.app/cache/</string>
+    <string name="offline_backup_path">/data/data/com.seniorhub.app/backup/</string>
+    
+    <!-- Offline UI Settings -->
+    <bool name="offline_show_connection_status">true</bool>
+    <bool name="offline_show_sync_progress">true</bool>
+    <bool name="offline_auto_sync_when_online">true</bool>
+    
+    <!-- Offline Error Messages -->
+    <string name="offline_error_no_internet">No internet connection available</string>
+    <string name="offline_error_sync_failed">Failed to sync data</string>
+    <string name="offline_error_cache_full">Cache storage is full</string>
+    <string name="offline_error_data_corrupted">Data appears to be corrupted</string>
+    
+    <!-- Offline Success Messages -->
+    <string name="offline_success_data_synced">Data successfully synced</string>
+    <string name="offline_success_cache_cleared">Cache successfully cleared</string>
+    <string name="offline_success_backup_created">Backup successfully created</string>
+</resources>

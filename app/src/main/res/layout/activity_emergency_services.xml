@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="@color/senior_background"
+    tools:context=".activities.EmergencyServicesActivity">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SeniorHub.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/senior_emergency"
+            app:popupTheme="@style/Theme.SeniorHub.PopupOverlay"
+            app:titleTextColor="@color/white"
+            android:contentDescription="Emergency services toolbar - Tap back to return to main screen">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBack"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="Back button - Tap to return to main screen"
+                    android:tooltipText="@string/back_to_main"
+                    app:cornerRadius="32dp"
+                    app:icon="@drawable/ic_arrow_back"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/senior_emergency" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/title_emergency_services_upper"
+                        android:textColor="@color/white"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:importantForAccessibility="yes">
+
+            <!-- Emergency Alert Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/senior_emergency"
+                app:strokeColor="@color/white"
+                app:strokeWidth="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/emergency_alert_title"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/emergency_alert_subtitle"
+                        android:textColor="@color/white"
+                        android:textSize="23sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!-- Emergency Services List -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/district_1_emergency_contacts"
+                android:textColor="@color/senior_primary_text"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginBottom="13dp"
+                android:gravity="center_horizontal" />
+
+            <!-- Central 911 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/senior_emergency"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="📞"
+                        android:textSize="30sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/central_911_davao"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textColor="@color/white"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/world_class_emergency_hotline"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCall911Central"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="Call Central 911 Davao"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="32dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="24dp"
+                        app:iconTint="@color/senior_emergency" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Davao Doctors Hospital -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="🏥"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/davao_doctors_hospital"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textColor="@color/senior_primary_text"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/_082_222_8000"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallDavaoDoctors"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Davao Doctors Hospital"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        android:gravity="center"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Southern Philippines Medical Center (SPMC) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="🚑"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp"  />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:text="@string/southern_philippines_medical_center"
+                            android:textColor="@color/senior_primary_text"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/_082_227_2731"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+
+                            android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallSPMC"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call SPMC"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Davao City Police Office (DCPO) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="👮"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp"  />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/davao_city_police_office"
+                            android:textColor="@color/senior_primary_text"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textSize="23sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/_082_227_1180"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallDCPO"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Davao City Police Office"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Davao City Central Fire Station -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="🚒"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp"  />
+
+                    <LinearLayout
+                        android:layout_width="254dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/davao_city_central_fire_station"
+                            android:textColor="@color/senior_primary_text"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/_082_224_3575"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallFireStation"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Davao City Central Fire Station"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Static Emergency Services -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="🚨"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp"  />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Davao City Emergency Response Unit"
+                            android:textColor="@color/senior_primary_text"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textSize="23sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="(082) 227-2731"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallEmergencyResponseUnit"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Davao City Emergency Response Unit"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/senior_emergency"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="🚑"
+                        android:textSize="30sp"
+                        android:layout_marginEnd="10dp"  />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Davao City Ambulance Service"
+                            android:textColor="@color/senior_primary_text"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textSize="23sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="(082) 227-2731"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallAmbulanceService"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Davao City Ambulance Service"
+                        app:backgroundTint="@color/senior_emergency"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Senior Hotline -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:strokeColor="@color/focus_blue"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="Senior citizen icon"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_senior_hub" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/senior_hotline"
+                            android:textColor="@color/senior_primary_text"
+                            android:textSize="23sp"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/senior_citizen_emergency_hotline"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallSeniorHotline"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Call Senior Hotline"
+                        app:backgroundTint="@color/focus_blue"
+                        app:cornerRadius="30dp"
+                        app:icon="@drawable/ic_phone"
+                        app:iconSize="25dp"
+                        app:iconTint="@color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

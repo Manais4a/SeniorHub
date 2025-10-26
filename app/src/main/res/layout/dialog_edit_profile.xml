@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="600dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <!-- Personal Information Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:accessibilityHeading="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/personal_information"
+            android:textColor="@color/focus_blue"
+            android:textSize="@dimen/text_subtitle"
+            android:textStyle="bold" />
+
+        <!-- Full Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilName"
+            style="@style/Widget.SeniorHub.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:hint="@string/full_name"
+            app:startIconDrawable="@drawable/ic_profile"
+            app:startIconTint="@color/focus_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:paddingStart="45dp"
+                android:textSize="@dimen/text_body_large" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Age -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAge"
+            style="@style/Widget.SeniorHub.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:hint="@string/age"
+            app:startIconDrawable="@drawable/ic_calendar"
+            app:startIconTint="@color/focus_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:paddingStart="45dp"
+                android:textSize="@dimen/text_body_large" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhone"
+            style="@style/Widget.SeniorHub.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:hint="@string/phone_number"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="@color/focus_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:paddingStart="45dp"
+                android:textSize="@dimen/text_body_large" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/Widget.SeniorHub.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:hint="@string/email_address"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/focus_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:paddingStart="45dp"
+                android:textSize="@dimen/text_body_large" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAddress"
+            style="@style/Widget.SeniorHub.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_md"
+            android:hint="@string/address"
+            app:startIconDrawable="@drawable/ic_home"
+            app:startIconTint="@color/focus_blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:paddingStart="45dp"
+                android:textSize="@dimen/text_body_large" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- City and Zip Code Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_lg"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCity"
+                style="@style/Widget.SeniorHub.TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:layout_weight="1"
+                android:hint="@string/city"
+                app:startIconDrawable="@drawable/ic_location_city"
+                app:startIconTint="@color/focus_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingStart="45dp"
+                    android:textSize="@dimen/text_body_large" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilZipCode"
+                style="@style/Widget.SeniorHub.TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_weight="1"
+                android:hint="@string/zip_code"
+                app:startIconDrawable="@drawable/ic_location_zip"
+                app:startIconTint="@color/focus_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:paddingStart="45dp"
+                    android:textSize="@dimen/text_body_large" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_large"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:layout_weight="1"
+                android:backgroundTint="@color/focus_blue"
+                android:text="@string/save"
+                android:textSize="@dimen/text_body_large"
+                android:tooltipText="@string/save"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:icon="@drawable/ic_check_circle"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_large"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_weight="1"
+                android:backgroundTint="@color/secondary_text"
+                android:text="@string/cancel"
+                android:textSize="@dimen/text_body_large"
+                android:tooltipText="@string/cancel"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:icon="@drawable/ic_close"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

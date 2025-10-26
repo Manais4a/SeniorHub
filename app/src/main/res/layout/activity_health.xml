@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/senior_background"
+    tools:context="com.seniorhub.activities.HealthActivity">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SeniorHub.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/health_green"
+            app:popupTheme="@style/Theme.SeniorHub.PopupOverlay"
+            app:titleTextColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="Back button - Tap to return to main screen"
+                    app:icon="@drawable/ic_arrow_back"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/health_green"
+                    app:cornerRadius="32dp"
+                    style="@style/Widget.Material3.Button.IconButton" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:accessibilityHeading="true"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_vertical"
+                        android:letterSpacing="0.05"
+                        android:text="HEALTH TRACKING"
+                        android:textColor="@color/white"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="yes"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <!-- Health Summary Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/health_green"
+                app:strokeWidth="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="📊 HEALTH RECORD SUMMARY"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!-- Health Metrics Grid -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="2"
+                        android:rowOrderPreserved="false"
+                        android:useDefaultMargins="true">
+
+                        <!-- Blood Pressure -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            app:cardBackgroundColor="@color/senior_health_light"
+                            app:strokeColor="@color/health_green"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="3dp"
+                                    android:contentDescription="Blood pressure icon"
+                                    android:src="@drawable/ic_blood_pressure"
+                                    app:tint="@color/senior_health" />
+
+                                <TextView
+                                    android:id="@+id/tvBloodPressure"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:gravity="center"
+                                    android:text="N/A"
+                                    android:textColor="@color/health_green"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    tools:text="120/80" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:layout_marginBottom="3dp"
+                                    android:text="Blood Pressure\n(mmHg)"
+                                    android:textColor="@color/health_green"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Blood Sugar -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            app:cardBackgroundColor="@color/senior_reminder_light"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeColor="@color/senior_reminder"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="3dp"
+                                    android:contentDescription="Blood sugar icon"
+                                    android:src="@drawable/ic_blood_sugar"
+                                    app:tint="@color/senior_reminder" />
+
+                                <TextView
+                                    android:id="@+id/tvBloodSugar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:gravity="center"
+                                    android:text="N/A"
+                                    android:textColor="@color/senior_reminder"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    tools:text="95" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:text="Blood Sugar\n(mg/dL)"
+                                    android:textColor="@color/senior_reminder"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Weight -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            app:cardBackgroundColor="@color/senior_profile_light"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeColor="@color/senior_profile"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="3dp"
+                                    android:contentDescription="Weight icon"
+                                    android:src="@drawable/ic_weight"
+                                    app:tint="@color/senior_profile" />
+
+                                <TextView
+                                    android:id="@+id/tvWeight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:gravity="center"
+                                    android:text="N/A"
+                                    android:textColor="@color/senior_profile"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    tools:text="65" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:text="Weight\n(kg)"
+                                    android:textColor="@color/senior_profile"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Heart Rate -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            app:cardBackgroundColor="@color/senior_emergency_light"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeColor="@color/senior_emergency"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="3dp"
+                                    android:contentDescription="Heart rate icon"
+                                    android:src="@drawable/ic_health"
+                                    app:tint="@color/senior_emergency" />
+
+                                <TextView
+                                    android:id="@+id/tvHeartRate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:gravity="center"
+                                    android:text="N/A"
+                                    android:textColor="@color/senior_emergency"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    tools:text="72" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:text="Heart Rate\n(bpm)"
+                                    android:textColor="@color/senior_emergency"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </GridLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Quick Log Entry -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/health_green"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="📝 ADD HEALTH RECORD"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!-- Quick Log Buttons -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="2"
+                        android:padding="10dp"
+                        android:rowOrderPreserved="false"
+                        android:useDefaultMargins="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogBloodPressure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/senior_health_light"
+                            android:fontFamily="sans-serif-black"
+                            app:strokeColor="@color/health_green"
+                            app:strokeWidth="2dp"
+                            android:text="BLOOD\nPRESSURE"
+                            android:textColor="@color/health_green"
+                            android:textStyle="bold"
+                            android:tooltipText="Log blood pressure"
+                            app:cornerRadius="16dp"
+                            app:icon="@drawable/ic_blood_pressure"
+                            app:iconGravity="textStart"
+                            app:iconSize="23dp"
+                            android:textSize="16sp"
+                            app:iconTint="@color/health_green" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogBloodSugar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/senior_reminder_light"
+                            android:fontFamily="sans-serif-black"
+                            android:text="BLOOD\nSUGAR"
+                            app:strokeColor="@color/senior_reminder"
+                            app:strokeWidth="2dp"
+                            android:textColor="@color/senior_reminder"
+                            android:textStyle="bold"
+                            android:tooltipText="Log blood sugar"
+                            app:cornerRadius="16dp"
+                            app:icon="@drawable/ic_blood_sugar"
+                            app:iconGravity="textStart"
+                            app:iconSize="23dp"
+                            android:textSize="16sp"
+                            app:iconTint="@color/senior_reminder" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/senior_profile_light"
+                            android:fontFamily="sans-serif-black"
+                            android:text="WEIGHT"
+                            android:textColor="@color/senior_profile"
+                            android:textStyle="bold"
+                            app:strokeColor="@color/senior_profile"
+                            app:strokeWidth="2dp"
+                            android:tooltipText="Log weight"
+                            app:cornerRadius="16dp"
+                            app:icon="@drawable/ic_weight"
+                            app:iconGravity="textStart"
+                            app:iconSize="23dp"
+                            android:textSize="16sp"
+                            app:iconTint="@color/senior_profile" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogMedication"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="@color/senior_emergency_light"
+                            android:fontFamily="sans-serif-black"
+                            android:text="HEART\nRATE"
+                            android:textColor="@color/senior_emergency"
+                            android:textStyle="bold"
+                            android:tooltipText="Log medication"
+                            app:cornerRadius="16dp"
+                            app:strokeColor="@color/senior_emergency"
+                            app:strokeWidth="2dp"
+                            app:icon="@drawable/ic_health"
+                            app:iconGravity="textStart"
+                            app:iconSize="23dp"
+                            android:textSize="16sp"
+                            app:iconTint="@color/senior_emergency" />
+                    </GridLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Health Records List -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="100dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/health_green"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:accessibilityHeading="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="📋 ALL HEALTH RECORDS"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewHealthRecords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:scrollbars="vertical"
+                        android:clipToPadding="false"
+                        android:padding="10dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingBottom="8dp"
+                        android:contentDescription="Health records list - Scroll to view all health records"
+                        tools:listitem="@layout/item_health_log" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    tools:context="activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:importantForAccessibility="yes">
+
+        <!-- Header Section with improved layout -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="@dimen/card_corner"
+            app:cardElevation="@dimen/card_elevation"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/health_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- Top row with welcome message and profile -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Profile Image -->
+                    <ImageView
+                        android:id="@+id/ivUserProfile"
+                        android:layout_width="65dp"
+                        android:layout_height="60dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/sos_ring"
+                        android:contentDescription="Senior user's profile photo"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/ic_profile" />
+
+                    <!-- Welcome Text Section -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/space_lg"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvWelcome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:contentDescription="Welcome message"
+                            android:text="@string/welcome_back"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="Senior user's name"
+                            android:text=""
+                            android:textColor="@color/primary_text"
+                            android:textSize="23sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Action buttons row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnVoiceAssistance"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Toggle Voice Assistance"
+                        android:src="@drawable/ic_mic"
+                        android:tooltipText="@string/voice_assistance"
+                        app:tint="@color/focus_blue" />
+
+                    <ImageButton
+                        android:id="@+id/btnProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Open Profile"
+                        android:src="@drawable/ic_profile"
+                        android:tooltipText="@string/profile"
+                        app:tint="@color/focus_blue" />
+
+                    <!-- Logout Button -->
+                    <ImageButton
+                        android:id="@+id/btnLogout"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Logout from account"
+                        android:src="@drawable/ic_logout"
+                        android:tooltipText="@string/logout"
+                        app:tint="@color/emergency_red" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Emergency Section - Updated to match the image -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/ssos"
+            app:cardCornerRadius="@dimen/card_corner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <!-- EMERGENCY Label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:accessibilityHeading="true"
+                    android:text="@string/emergency"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- SOS Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSOS"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:backgroundTint="@color/sos_bg"
+                    app:strokeColor="@color/stroke"
+                    app:strokeWidth="4dp"
+                    android:contentDescription="Emergency SOS Button - Tap to send emergency alert to your emergency contact"
+                    android:text="@string/sos"
+                    android:textColor="@color/white"
+                    android:textSize="46sp"
+                    android:textStyle="bold"
+                    android:tooltipText="@string/emergency_instructions"
+                    app:cornerRadius="80dp" />
+
+                <!-- Tap for Emergency Help -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_instructions"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Quick Actions label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/quick_actions"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true" />
+
+        <!-- Enhanced Grid Layout for Better Touch Targets -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="@dimen/space_sm"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:padding="2dp"
+            android:columnOrderPreserved="false"
+            android:rowCount="3"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <!-- Emergency Services Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEmergency"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                app:cardBackgroundColor="@color/senior_emergency_light"
+                android:clickable="true"
+                android:contentDescription="@string/emergency_services_desc"
+                android:focusable="true"
+                android:tooltipText="@string/emergency_services"
+                app:strokeColor="@color/emergency_red"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/emergency_services_icon"
+                        android:src="@drawable/ic_emergency"
+                        app:tint="@color/emergency_red" />
+
+                    <TextView
+                        android:id="@+id/tvEmergency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/emergency_services"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Reminders Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReminders"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                app:cardBackgroundColor="@color/senior_reminder_light"
+                android:clickable="true"
+                android:contentDescription="@string/reminders_desc"
+                android:focusable="true"
+                android:tooltipText="@string/reminders"
+                app:strokeColor="@color/senior_reminder"
+                app:strokeWidth="2dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="2dp"
+                            android:contentDescription="@string/reminders_icon"
+                            android:src="@drawable/ic_reminder"
+                            app:tint="@color/senior_reminder" />
+
+                        <TextView
+                            android:id="@+id/tvReminders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/reminders"
+                            android:textColor="@color/primary_text"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Health Tracking Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardHealth"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/senior_health_light"
+                android:contentDescription="@string/health_tracking_desc"
+                android:focusable="true"
+                android:tooltipText="@string/health"
+                app:strokeColor="@color/health_green"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/health_tracking_icon"
+                        android:src="@drawable/ic_health"
+                        app:tint="@color/health_green" />
+
+                    <TextView
+                        android:id="@+id/tvHealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/health"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Language Selection Card (replacing Profile) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLanguage"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:contentDescription="Select language"
+                android:focusable="true"
+                android:tooltipText="Language"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="Language icon"
+                        android:src="@drawable/ic_language"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Language"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Benefits Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBenefits"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/senior_benefits_light"
+                android:contentDescription="@string/benefits_desc"
+                android:focusable="true"
+                android:tooltipText="@string/benefits"
+                app:strokeColor="@color/health_purple"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="Benefits Icon"
+                        android:src="@drawable/ic_benefits"
+                        app:tint="@color/health_purple" />
+
+                    <TextView
+                        android:id="@+id/tvBenefits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/benefits"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Social Features Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSocial"
+                style="@style/Widget.SeniorHub.Card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:contentDescription="Social Features - Tap to connect with family and community"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/senior_profile_light"
+                android:tooltipText="@string/social"
+                app:strokeColor="@color/info_blue"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="Social Features Icon"
+                        android:src="@drawable/ic_social"
+                        app:tint="@color/info_blue" />
+
+                    <TextView
+                        android:id="@+id/tvSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/social"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>

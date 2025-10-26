@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="@color/senior_background"
+    tools:context=".activities.BenefitsActivity">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SeniorHub.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/senior_benefits"
+            app:popupTheme="@style/Theme.SeniorHub.PopupOverlay"
+            app:titleTextColor="@color/white"
+            android:contentDescription="Benefits tracker toolbar - Tap back to return to main screen">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="Back button - Tap to return to main screen"
+                    app:icon="@drawable/ic_arrow_back"
+                    app:iconSize="35dp"
+                    app:iconTint="@color/senior_benefits"
+                    app:cornerRadius="32dp"
+                    style="@style/Widget.Material3.Button.IconButton" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SENIOR BENEFITS"
+                        android:textColor="@color/white"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.05" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <!-- Benefits Summary Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="10dp"
+                app:strokeColor="@color/senior_benefits"
+                app:strokeWidth="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.05"
+                        android:text="BENEFITS SUMMARY"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!-- Benefits Stats Grid -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="1"
+                        android:padding="15dp"
+                        android:rowOrderPreserved="false"
+                        android:useDefaultMargins="true">
+
+                        <!-- Available Benefits -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardAvailableBenefits"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/senior_benefits_light"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeColor="@color/senior_benefits"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/tvAvailableBenefits"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="sans-serif-black"
+                                    android:text=""
+                                    android:textColor="@color/senior_benefits"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:text="Available Benefits"
+                                    android:textColor="@color/senior_benefits"
+                                    android:textSize="25sp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Benefits Next Schedule -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardNextSchedule"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/senior_profile_light"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:strokeColor="@color/senior_profile"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="119dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/tvNextDisbursement"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="sans-serif-black"
+                                    android:text=""
+                                    android:textColor="@color/senior_profile"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    tools:text="" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center"
+                                    android:text="Next Schedule"
+                                    android:textColor="@color/senior_profile"
+                                    android:textSize="25sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </GridLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Benefits List Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvBenefitsListTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.05"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/available_assistance"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="23sp"
+                    android:weightSum="2"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- RecyclerView for Social Services -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBenefits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_sm"
+
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:contentDescription="@string/social_services_list_description"
+                android:importantForAccessibility="yes"
+                tools:listitem="@layout/item_benefit" />
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_xl"
+                android:visibility="gone" />
+
+            <!-- Empty State -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/space_xl"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="48sp"
+                    android:layout_marginBottom="@dimen/space_md" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_services_available"
+                    android:textColor="@color/focus_blue"
+                    android:textSize="@dimen/text_body_large"
+                    android:gravity="center"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="No social services available" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing and Margins -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_2xl">32dp</dimen>
+    <dimen name="space_3xl">48dp</dimen>
+    <dimen name="space_4xl">64dp</dimen>
+    <dimen name="space_5xl">96dp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+
+    <!-- Text Sizes - Senior Friendly -->
+    <dimen name="text_caption">14sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_body">18sp</dimen>
+    <dimen name="text_body_large">20sp</dimen>
+    <dimen name="text_subtitle">22sp</dimen>
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_headline">28sp</dimen>
+    <dimen name="text_headline_large">32sp</dimen>
+    <dimen name="text_sos">48sp</dimen>
+    <dimen name="text_badge">12sp</dimen>
+
+    <!-- Button Dimensions -->
+    <dimen name="button_height_small">48dp</dimen>
+    <dimen name="button_height_medium">56dp</dimen>
+    <dimen name="button_height_large">64dp</dimen>
+    <dimen name="button_min">56dp</dimen>
+    <dimen name="button_corner">8dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius_large">16dp</dimen>
+    <dimen name="button_min_width">200dp</dimen>
+    <dimen name="button_padding_vertical">12dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="card_corner">12dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_elevation_high">8dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+
+    <!-- Main Screen Card Heights -->
+    <dimen name="main_card_height">160dp</dimen>
+    <dimen name="health_button_height">120dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xlarge">64dp</dimen>
+    <dimen name="main_icon_size">56dp</dimen>
+    <dimen name="status_icon_size">32dp</dimen>
+    <dimen name="empty_state_icon_size">80dp</dimen>
+
+    <!-- Header and Navigation -->
+    <dimen name="header_button_size">70dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_height_large">72dp</dimen>
+    <dimen name="toolbar_padding">16dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+
+    <!-- Profile and Images -->
+    <dimen name="profile_image_size">120dp</dimen>
+    <dimen name="avatar_size_small">32dp</dimen>
+    <dimen name="avatar_size_medium">48dp</dimen>
+    <dimen name="avatar_size_large">64dp</dimen>
+
+    <!-- Input Fields -->
+    <dimen name="input_field_height">56dp</dimen>
+    <dimen name="input_field_border_width">2dp</dimen>
+    <dimen name="input_field_corner_radius">8dp</dimen>
+    <dimen name="input_corner_radius">8dp</dimen>
+
+    <!-- Emergency SOS Button -->
+    <dimen name="sos_button_size">160dp</dimen>
+    <dimen name="sos_corner_radius">80dp</dimen>
+    <dimen name="sos_stroke_width">4dp</dimen>
+
+    <!-- Badges and Indicators -->
+    <dimen name="badge_size">24dp</dimen>
+    <dimen name="progress_height">4dp</dimen>
+    <dimen name="progress_height_thick">8dp</dimen>
+
+    <!-- Floating Action Button -->
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_size_large">72dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Screen Margins -->
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="screen_margin_large">24dp</dimen>
+
+    <!-- List Item Heights -->
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="list_item_height_large">88dp</dimen>
+
+    <!-- Divider -->
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- Touch Target Minimum (Accessibility) -->
+    <dimen name="min_touch_target">48dp</dimen>
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="touch_target_xlarge">96dp</dimen>
+
+    <!-- Elevation Levels -->
+    <dimen name="elevation_low">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_high">8dp</dimen>
+    <dimen name="elevation_highest">16dp</dimen>
+
+    <!-- Corner Radius Variations -->
+    <dimen name="corner_radius_sm">4dp</dimen>
+    <dimen name="corner_radius_md">8dp</dimen>
+    <dimen name="corner_radius_lg">12dp</dimen>
+    <dimen name="corner_radius_xl">16dp</dimen>
+    <dimen name="card_corner_radius_large">16dp</dimen>
+
+    <!-- Dialog and Modal -->
+    <dimen name="dialog_margin">24dp</dimen>
+    <dimen name="dialog_padding">24dp</dimen>
+    <dimen name="dialog_corner_radius">16dp</dimen>
+
+    <!-- Specific Component Sizes -->
+    <dimen name="switch_width">52dp</dimen>
+    <dimen name="switch_height">32dp</dimen>
+    <dimen name="checkbox_size">24dp</dimen>
+    <dimen name="radio_button_size">24dp</dimen>
+
+    <!-- Accessibility Enhancement -->
+    <dimen name="accessibility_padding">8dp</dimen>
+    <dimen name="accessibility_margin">12dp</dimen>
+
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_icon_size">28dp</dimen>
+    <dimen name="bottom_nav_text_size">12sp</dimen>
+    <dimen name="bottom_nav_elevation">8dp</dimen>
+    <dimen name="bottom_nav_height_large">72dp</dimen>
+
+    <!-- Progress Indicators -->
+    <dimen name="progress_size_small">24dp</dimen>
+    <dimen name="progress_size_medium">32dp</dimen>
+    <dimen name="progress_size_large">48dp</dimen>
+</resources>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@color/white"
+    android:stateListAnimator="@animator/card_lift_animator"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/card_elevation_high"
+    app:strokeColor="@color/senior_benefits"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="3sp"/>
+
+    <!-- Header Section with Benefit Name and Schedule Date -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <!-- Schedule Icon -->
+        <ImageView
+            android:id="@+id/ivScheduleIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/space_md"
+            android:contentDescription="Schedule icon"
+            android:importantForAccessibility="yes"
+            android:padding="@dimen/space_sm"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_calendar"
+            app:tint="@color/senior_benefits" />
+
+        <!-- Benefit Name and Schedule Date -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_lg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBenefitTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/space_lg"
+                android:contentDescription="Benefit name"
+                android:fontFamily="sans-serif-medium"
+                android:importantForAccessibility="yes"
+                android:textColor="@color/senior_primary_text"
+                android:textSize="20sp"
+                android:layout_marginTop="3dp"
+                android:textStyle="bold"
+                tools:text="DSWD Social Pension" />
+
+            <TextView
+                android:id="@+id/tvScheduleDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:background="@drawable/rounded_badge_background"
+                android:backgroundTint="@color/senior_benefits"
+                android:contentDescription="Schedule date badge"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:importantForAccessibility="yes"
+                android:paddingHorizontal="@dimen/space_sm"
+                android:paddingVertical="@dimen/space_xs"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Feb 1, 2025"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <!-- Expand/Collapse Icon -->
+        <ImageView
+            android:id="@+id/ivExpand"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="@dimen/space_lg"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Expand or collapse schedule details"
+            android:gravity="end"
+            android:importantForAccessibility="yes"
+            android:rotation="0"
+            android:src="@drawable/ic_chevron_down"
+            app:tint="@color/senior_primary_text" />
+
+    </LinearLayout>
+
+    <!-- Expandable Details Section -->
+    <LinearLayout
+        android:id="@+id/detailsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/senior_background"
+        android:padding="3dp"
+        android:visibility="gone">
+
+        <!-- Amount/Value Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvBenefitAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Benefit amount"
+                android:fontFamily="sans-serif-medium"
+                android:importantForAccessibility="yes"
+                android:lineSpacingExtra="1dp"
+                android:textColor="@color/senior_primary_text"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="₱500" />
+
+        </LinearLayout>
+
+        <!-- Schedule Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
+
+            <!-- Schedule Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="3dp"
+                android:layout_marginBottom="3dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Schedule icon"
+                    android:importantForAccessibility="yes"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Schedule section"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="Next Schedule"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Schedule Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/services_content_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvScheduleDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Schedule details"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold"
+                    tools:text="Next disbursement: February 1, 2025\nAmount: ₱500\nStatus: Scheduled" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Description Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp">
+
+            <!-- Description Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="3dp"
+                android:layout_marginBottom="3dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Description icon"
+                    android:importantForAccessibility="yes"
+                    android:src="@drawable/ic_info"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Description section"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="Description"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Description Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/services_content_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvBenefitDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Benefit description"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold"
+                    tools:text="₱500 monthly cash assistance for indigent senior citizens" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Requirements Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp">
+
+            <!-- Requirements Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Requirements icon"
+                    android:importantForAccessibility="yes"
+                    android:src="@drawable/ic_requirements"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Requirements section"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="Requirements"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Requirements Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/services_content_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvBenefitRequirements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Benefit requirements"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold"
+                    tools:text="• Senior Citizen ID\n• Valid ID\n• Proof of indigency\n• Barangay certification" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Application Process Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp">
+
+            <!-- Application Process Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Application process icon"
+                    android:importantForAccessibility="yes"
+                    android:src="@drawable/ic_process"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Application process section"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="Application Process"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Application Process Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/services_content_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvBenefitApplicationProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Benefit application process"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold"
+                    tools:text="1. Submit application at DSWD Field Office XI\n2. Present required documents\n3. Wait for approval\n4. Receive monthly disbursement" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Contact Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="3dp">
+
+            <!-- Contact Information Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Contact information icon"
+                    android:importantForAccessibility="yes"
+                    android:src="@drawable/ic_phone"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Contact information section"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="Contact Information"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Contact Information Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/services_content_background"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvBenefitContactInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Benefit contact information"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold"
+                    tools:text="DSWD Field Office XI: (082) 224-1234\nJP Laurel Ave, Bajada\nDavao City" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

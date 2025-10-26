@@ -1,0 +1,261 @@
+{
+  "rules": {
+    "benefits": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "social_services": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "health_records": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$seniorId": {
+        ".read": "auth != null && (auth.uid == $seniorId || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && (auth.uid == $seniorId || root.child('admin_users').child(auth.uid).exists())",
+        "$recordId": {
+          ".validate": "newData.hasChildren(['type', 'value', 'unit', 'timestamp', 'seniorId', 'seniorName'])",
+          "type": {
+            ".validate": "newData.isString() && newData.val().matches(/^(blood_pressure|blood_sugar|weight|heart_rate)$/)"
+          },
+          "value": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+          },
+          "unit": {
+            ".validate": "newData.isString() && newData.val().length <= 20"
+          },
+          "seniorId": {
+            ".validate": "newData.isString() && newData.val() == $seniorId"
+          },
+          "seniorName": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+          },
+          "notes": {
+            ".validate": "newData.isString() && newData.val().length <= 500"
+          },
+          "recordedBy": {
+            ".validate": "newData.isString() && newData.val().matches(/^(user|admin|family)$/)"
+          },
+          "timestamp": {
+            ".validate": "newData.isNumber() && newData.val() > 0"
+          },
+          "createdAt": {
+            ".validate": "newData.isNumber() && newData.val() > 0"
+          },
+          "updatedAt": {
+            ".validate": "newData.isNumber() && newData.val() > 0"
+          }
+        }
+      }
+    },
+    "emergency_services": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "seniors": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('admin_users').child(auth.uid).exists()",
+      "$seniorId": {
+        ".read": "auth != null && (auth.uid == $seniorId || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && (auth.uid == $seniorId || root.child('admin_users').child(auth.uid).exists())",
+        ".validate": "newData.hasChildren(['firstName', 'lastName', 'email', 'phoneNumber', 'dateOfBirth', 'createdAt'])",
+        "firstName": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+        },
+        "lastName": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+        },
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^[^@]+@[^@]+\\.[^@]+$/)"
+        },
+        "phoneNumber": {
+          ".validate": "newData.isString() && newData.val().length >= 10 && newData.val().length <= 15"
+        },
+        "dateOfBirth": {
+          ".validate": "newData.isString() && newData.val().length == 10"
+        },
+        "address": {
+          ".validate": "newData.hasChildren(['street', 'city', 'province', 'postalCode'])"
+        },
+        "emergencyContact": {
+          ".validate": "newData.hasChildren(['name', 'phoneNumber', 'relationship'])"
+        },
+        "healthStatus": {
+          ".validate": "newData.isString() && newData.val().matches(/^(good|fair|poor|critical)$/)"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        "lastUpdated": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        }
+      }
+    },
+    "appointments": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$appointmentId": {
+        ".read": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".validate": "newData.hasChildren(['seniorId', 'seniorName', 'appointmentType', 'date', 'time', 'status'])",
+        "seniorId": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "seniorName": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "appointmentType": {
+          ".validate": "newData.isString() && newData.val().matches(/^(medical|dental|vision|therapy|other)$/)"
+        },
+        "status": {
+          ".validate": "newData.isString() && newData.val().matches(/^(scheduled|confirmed|cancelled|completed|no_show)$/)"
+        },
+        "date": {
+          ".validate": "newData.isString() && newData.val().length == 10"
+        },
+        "time": {
+          ".validate": "newData.isString() && newData.val().matches(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/)"
+        },
+        "location": {
+          ".validate": "newData.isString() && newData.val().length <= 200"
+        },
+        "notes": {
+          ".validate": "newData.isString() && newData.val().length <= 1000"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        }
+      }
+    },
+    "emergency_alerts": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$alertId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".validate": "newData.hasChildren(['seniorId', 'seniorName', 'alertType', 'timestamp', 'status'])",
+        "seniorId": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "seniorName": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "alertType": {
+          ".validate": "newData.isString() && newData.val().matches(/^(medical|fall|panic|location|other)$/)"
+        },
+        "status": {
+          ".validate": "newData.isString() && newData.val().matches(/^(active|resolved|false_alarm)$/)"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        "location": {
+          ".validate": "newData.hasChildren(['latitude', 'longitude'])"
+        },
+        "notes": {
+          ".validate": "newData.isString() && newData.val().length <= 1000"
+        }
+      }
+    },
+    "activities": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "admin_users": {
+      ".read": "auth != null && root.child('admin_users').child(auth.uid).exists()",
+      ".write": "auth != null && root.child('admin_users').child(auth.uid).exists()",
+      "$adminId": {
+        ".read": "auth != null && (auth.uid == $adminId || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && root.child('admin_users').child(auth.uid).exists()",
+        ".validate": "newData.hasChildren(['email', 'role', 'permissions', 'createdAt'])",
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^[^@]+@[^@]+\\.[^@]+$/)"
+        },
+        "role": {
+          ".validate": "newData.isString() && newData.val().matches(/^(super_admin|admin|facilitator|viewer)$/)"
+        },
+        "permissions": {
+          ".validate": "newData.hasChildren(['health_records', 'emergency_alerts', 'user_management', 'data_export'])"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        "lastLogin": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        }
+      }
+    },
+    "data_collection": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "notifications": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$notificationId": {
+        ".read": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".validate": "newData.hasChildren(['seniorId', 'title', 'message', 'type', 'timestamp', 'status'])",
+        "seniorId": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "title": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+        },
+        "type": {
+          ".validate": "newData.isString() && newData.val().matches(/^(health_reminder|appointment|emergency|general|medication)$/)"
+        },
+        "status": {
+          ".validate": "newData.isString() && newData.val().matches(/^(sent|delivered|read|failed)$/)"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        "priority": {
+          ".validate": "newData.isString() && newData.val().matches(/^(low|medium|high|urgent)$/)"
+        }
+      }
+    },
+    "reminders": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$reminderId": {
+        ".read": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".write": "auth != null && (auth.uid == data.child('seniorId').val() || root.child('admin_users').child(auth.uid).exists())",
+        ".validate": "newData.hasChildren(['seniorId', 'title', 'description', 'reminderType', 'scheduledTime', 'status'])",
+        "seniorId": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "title": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+        },
+        "description": {
+          ".validate": "newData.isString() && newData.val().length <= 500"
+        },
+        "reminderType": {
+          ".validate": "newData.isString() && newData.val().matches(/^(medication|appointment|health_check|exercise|meal|other)$/)"
+        },
+        "status": {
+          ".validate": "newData.isString() && newData.val().matches(/^(active|completed|cancelled|snoozed)$/)"
+        },
+        "scheduledTime": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        "recurrence": {
+          ".validate": "newData.isString() && newData.val().matches(/^(none|daily|weekly|monthly)$/)"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorHub Admin Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           SeniorHub Login - Light Blue Theme
+           ======================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 25%, #81d4fa 50%, #4fc3f7 75%, #29b6f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(33, 150, 243, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(3, 169, 244, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 188, 212, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Main Login Container */
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 
+                0 25px 50px rgba(33, 150, 243, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(33, 150, 243, 0.2);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 600px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Left Section - Image */
+        .login-illustration {
+            flex: 1;
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            min-height: 400px;
+        }
+        
+        .illustration-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+            padding: 2rem;
+        }
+        
+        .senior-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .illustration-text h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        
+        .illustration-text p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            color: white;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        /* Right Section - Login Form */
+        .login-form-section {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(25, 118, 210, 0.1);
+        }
+        
+        .login-subtitle {
+            color: #424242;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Form Styles */
+        .login-form {
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            color: #424242;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e3f2fd;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #424242;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-control::placeholder {
+            color: #757575;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #2196f3;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        /* Role Selection */
+        .role-selection {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .role-option {
+            padding: 1rem;
+            border: 2px solid #e3f2fd;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #424242;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .role-option:hover {
+            border-color: #2196f3;
+            background: rgba(33, 150, 243, 0.05);
+        }
+        
+        .role-option.selected {
+            border-color: #2196f3;
+            background: rgba(33, 150, 243, 0.1);
+            box-shadow: 0 0 20px rgba(33, 150, 243, 0.2);
+        }
+        
+        .role-option input[type="radio"] {
+            display: none;
+        }
+        
+        .role-option .role-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #424242;
+        }
+        
+        .role-option .role-desc {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            color: #757575;
+        }
+        
+        /* Login Button */
+        .login-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+        }
+        
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Error/Success Messages */
+        .message {
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .message.error {
+            background: rgba(244, 67, 54, 0.1);
+            color: #d32f2f;
+            border: 1px solid rgba(244, 67, 54, 0.2);
+        }
+        
+        .message.success {
+            background: rgba(76, 175, 80, 0.1);
+            color: #388e3c;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        
+        /* Loading States */
+        .loading {
+            position: relative;
+            color: transparent;
+        }
+        
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .login-container {
+                width: 98%;
+                max-width: 900px;
+            }
+            
+            .senior-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .illustration-text h3 {
+                font-size: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                margin: 1rem;
+                min-height: auto;
+                width: 95%;
+            }
+            
+            .login-illustration {
+                min-height: 300px;
+                flex: none;
+                order: 2;
+            }
+            
+            .login-form-section {
+                padding: 2rem;
+                order: 1;
+            }
+            
+            .login-title {
+                font-size: 2rem;
+            }
+            
+            .senior-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .illustration-text h3 {
+                font-size: 1.5rem;
+            }
+            
+            .illustration-text p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .login-form-section {
+                padding: 1.5rem;
+            }
+            
+            .login-title {
+                font-size: 1.75rem;
+            }
+            
+            .senior-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .illustration-text h3 {
+                font-size: 1.25rem;
+            }
+            
+            .illustration-text p {
+                font-size: 0.9rem;
+            }
+            
+            .form-control {
+                padding: 0.875rem;
+            }
+            
+            .login-btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .login-container {
+                margin: 0.5rem;
+                border-radius: 16px;
+            }
+            
+            .login-form-section {
+                padding: 1rem;
+            }
+            
+            .login-illustration {
+                padding: 1rem;
+            }
+            
+            .senior-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        /* Hidden class for form switching */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading SeniorHub Admin Portal...</p>
+    </div>
+
+    <!-- Main Login Container -->
+    <div id="authScreen" class="auth-screen">
+        <div class="login-container">
+            <!-- Left Section - Image -->
+            <div class="login-illustration">
+                <div class="illustration-content">
+                    <!-- Replace this with your custom image -->
+                    <img src="images/seniorhub-login-image.png" 
+                         alt="SeniorHub - Senior Citizens Care" 
+                         class="senior-image"
+                         onload="console.log('✅ Custom image loaded successfully!')"
+                         onerror="console.log('❌ Custom image failed to load, using fallback'); this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'">
+                    <div class="illustration-text">
+                        <h3>Welcome to SeniorHub Administration</h3>
+                    </div>
+                </div>
+                </div>
+                
+            <!-- Right Section - Login Form -->
+            <div class="login-form-section">
+                <div class="login-header">
+                    <h1 class="login-title">Admin Login</h1>
+                    <p class="login-subtitle">Login Page for Administrator for SeniorHub</p>
+                </div>
+                
+                <!-- Messages -->
+                <div id="messageContainer"></div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="loginEmail" class="form-label">Email Address</label>
+                        <input type="email" id="loginEmail" name="loginEmail" class="form-control" required autocomplete="email" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" class="form-control" required autocomplete="current-password" placeholder="Enter your password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Admin Role</label>
+                        <div class="role-selection">
+                            <div class="role-option" data-role="admin">
+                                <input type="radio" name="loginRole" value="admin" id="roleAdmin">
+                                <div class="role-name">Administrator</div>
+                                <div class="role-desc">Full system access</div>
+                            </div>
+                        </div>
+                        <small style="color: #757575; font-size: 0.85rem; margin-top: 0.5rem; display: block;">
+                            Select the role that matches your account permissions
+                        </small>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Log In 
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/login.js"></script>
+    
+    <script>
+        // Role selection functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const roleOptions = document.querySelectorAll('.role-option');
+            
+            roleOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    roleOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Check the radio button
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                });
+            });
+            
+            // Set default role
+            const defaultRole = document.querySelector('[data-role="admin"]');
+            if (defaultRole) {
+                defaultRole.click();
+            }
+        });
+        
+        // Message display function
+        function showMessage(text, type = 'error') {
+            const messageContainer = document.getElementById('messageContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.innerHTML = `
+                <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'}"></i>
+                ${text}
+            `;
+            
+            messageContainer.innerHTML = '';
+            messageContainer.appendChild(messageDiv);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.parentNode.removeChild(messageDiv);
+                }
+            }, 5000);
+        }
+        
+        // Loading screen functionality
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const authScreen = document.getElementById('authScreen');
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                authScreen.style.display = 'block';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

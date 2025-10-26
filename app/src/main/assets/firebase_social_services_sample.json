@@ -1,0 +1,119 @@
+{
+  "social_services": {
+    "osca_district1_annex1": {
+      "name": "Office for Senior Citizens Affairs (OSCA) - District 1 Annex I",
+      "address": "G/F SP Building, Magallanes Street, Davao City",
+      "contact": "Tel: (082) 241-1000 local 394; Email: osca@davaocity.gov.ph",
+      "phoneNumber": "(082) 241-1000",
+      "email": "osca@davaocity.gov.ph",
+      "servicesOffered": "• Senior citizen ID processing\n• Social pension assistance\n• Health benefits coordination\n• Community programs for seniors\n• Legal assistance referrals\n• Emergency financial aid",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Main office for senior citizen affairs in District 1",
+      "website": "https://davaocity.gov.ph",
+      "isActive": true,
+      "priority": 10
+    },
+    "osca_main_office": {
+      "name": "OSCA Main Office",
+      "address": "Legislative Building, Sangguniang Panlungsod, Magallanes St., Davao City",
+      "contact": "(082) 222-8061, (082) 241-1000 loc. 394; osca@davaocity.gov.ph",
+      "phoneNumber": "(082) 222-8061",
+      "email": "osca@davaocity.gov.ph",
+      "servicesOffered": "• Senior citizen ID processing\n• Social pension distribution\n• Health insurance assistance\n• Community center activities\n• Senior citizen discounts\n• Transportation assistance",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Main OSCA office for all districts",
+      "website": "https://davaocity.gov.ph",
+      "isActive": true,
+      "priority": 9
+    },
+    "cswdo": {
+      "name": "City Social Welfare and Development Office (CSWDO)",
+      "address": "A. Pichon St. (behind City Hall Annex Building), Davao City",
+      "contact": "(082) 225-0417, 227-1617, 295-3500; email: cswdo@davaocity.gov.ph",
+      "phoneNumber": "(082) 225-0417",
+      "email": "cswdo@davaocity.gov.ph",
+      "servicesOffered": "• Social welfare programs\n• Family assistance programs\n• Child and youth services\n• Women's protection services\n• Community development programs\n• Disaster relief assistance",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Handles various social welfare programs for all age groups",
+      "website": "https://davaocity.gov.ph",
+      "isActive": true,
+      "priority": 8
+    },
+    "cssdo": {
+      "name": "City Social Services and Development Office (CSSDO)",
+      "address": "A. Pichon St., at back of City Hall Annex Building, Davao City",
+      "contact": "Contact: (082) 225-0417; also uses same numbers as CSWDO sometimes; handles programs for older persons, PWDs etc.",
+      "phoneNumber": "(082) 225-0417",
+      "email": "",
+      "servicesOffered": "• Programs for older persons\n• Programs for persons with disabilities (PWDs)\n• Community-based rehabilitation\n• Livelihood assistance\n• Skills training programs\n• Social case management",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Specializes in programs for older persons and PWDs",
+      "website": "https://davaocity.gov.ph",
+      "isActive": true,
+      "priority": 7
+    },
+    "dswd_region_xi": {
+      "name": "DSWD Region XI (Field Office / Regional Office)",
+      "address": "Ramon Magsaysay Avenue corner D. Suazo Street, Davao City",
+      "contact": "Tel: (082) 227-1964; email: fo11@dswd.gov.ph",
+      "phoneNumber": "(082) 227-1964",
+      "email": "fo11@dswd.gov.ph",
+      "servicesOffered": "• Pantawid Pamilyang Pilipino Program (4Ps)\n• Social Pension for Indigent Senior Citizens\n• Sustainable Livelihood Program\n• Protective Services Program\n• Disaster Response Operations\n• Kalahi-CIDSS Program",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Regional office covering Davao Region",
+      "website": "https://fo11.dswd.gov.ph",
+      "isActive": true,
+      "priority": 6
+    },
+    "barangay_1a_poblacion": {
+      "name": "Barangay 1-A Poblacion (Local Barangay Office)",
+      "address": "Bolton / Magallanes Street, Poblacion, Davao City",
+      "contact": "Office hours Mon-Fri 8 AM-5 PM; useful for local/resident-level services (barangay cert, etc.)",
+      "phoneNumber": "",
+      "email": "",
+      "servicesOffered": "• Barangay clearance\n• Certificate of residency\n• Local community programs\n• Barangay health services\n• Local dispute resolution\n• Community monitoring",
+      "serviceType": "BARANGAY",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Local barangay office for District 1 residents",
+      "website": "",
+      "isActive": true,
+      "priority": 5
+    },
+    "davao_city_hall": {
+      "name": "Davao City Hall - Mayor's Office",
+      "address": "San Pedro Street, Davao City",
+      "contact": "Tel: (082) 241-1000; Email: mayor@davaocity.gov.ph",
+      "phoneNumber": "(082) 241-1000",
+      "email": "mayor@davaocity.gov.ph",
+      "servicesOffered": "• City government services\n• Public assistance programs\n• City ordinance information\n• Public safety services\n• Urban planning services\n• Public health programs",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Main city government office",
+      "website": "https://davaocity.gov.ph",
+      "isActive": true,
+      "priority": 4
+    },
+    "philhealth_davao": {
+      "name": "PhilHealth Davao City Office",
+      "address": "J.P. Laurel Avenue, Davao City",
+      "contact": "Tel: (082) 227-1021; Email: davao@philhealth.gov.ph",
+      "phoneNumber": "(082) 227-1021",
+      "email": "davao@philhealth.gov.ph",
+      "servicesOffered": "• Health insurance enrollment\n• Member data update\n• Premium payment assistance\n• Claims processing\n• Senior citizen health benefits\n• Indigent program enrollment",
+      "serviceType": "GOVERNMENT",
+      "officeHours": "Monday to Friday, 8:00 AM - 5:00 PM",
+      "notes": "Health insurance services for senior citizens",
+      "website": "https://www.philhealth.gov.ph",
+      "isActive": true,
+      "priority": 3
+    }
+  }
+}
+
+
+

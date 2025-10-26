@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SeniorHub Theme Resources
+    Comprehensive theme definitions optimized for senior citizens
+    Features: High contrast, large text, accessible design, Material 3 compliance
+    
+    @author SeniorHub Team
+    @version 2.0.0
+-->
+<resources>
+
+    <!-- ========================================== -->
+    <!-- BASE APPLICATION THEMES -->
+    <!-- ========================================== -->
+
+    <!-- Main application theme (Material 3) -->
+    <style name="Theme.SeniorHub" parent="Theme.Material3.DayNight">
+        <!-- Brand colors -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorOnSecondary">@color/text_on_secondary</item>
+
+        <!-- Surfaces / background -->
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+        <item name="colorSurfaceVariant">@color/light_background</item>
+        <item name="colorOnSurfaceVariant">@color/primary_text</item>
+        <item name="colorOutline">@color/divider_color</item>
+
+        <!-- System bars -->
+        <item name="android:statusBarColor">@color/focus_blue</item>
+        <item name="android:navigationBarColor">@color/focus_blue</item>
+
+        <!-- Component defaults -->
+        <item name="android:buttonStyle">@style/Widget.SeniorHub.Button</item>
+        <item name="materialButtonStyle">@style/Widget.SeniorHub.Button</item>
+        <item name="textInputStyle">@style/Widget.SeniorHub.TextInputLayout</item>
+        <item name="bottomNavigationStyle">@style/Widget.SeniorHub.BottomNavigationView</item>
+    </style>
+
+    <!-- No Action Bar variant -->
+    <style name="Theme.SeniorHub.NoActionBar" parent="Theme.SeniorHub">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- ACCESSIBILITY THEMES -->
+    <!-- ========================================== -->
+
+    <!-- High contrast theme -->
+    <style name="Theme.SeniorHub.HighContrast" parent="Theme.SeniorHub">
+        <item name="colorPrimary">@color/high_contrast_primary</item>
+        <item name="colorSecondary">@color/high_contrast_secondary</item>
+        <item name="colorSurface">@color/high_contrast_secondary</item>
+        <item name="colorOnSurface">@color/high_contrast_primary</item>
+        <item name="colorOnBackground">@color/high_contrast_primary</item>
+        <item name="android:textColor">@color/high_contrast_primary</item>
+        <item name="colorError">@color/high_contrast_error</item>
+        <item name="colorOnError">@color/high_contrast_secondary</item>
+    </style>
+
+    <!-- Large text theme for vision impairment -->
+    <style name="Theme.SeniorHub.LargeText" parent="Theme.SeniorHub">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <!-- Extra large text theme for severe vision impairment -->
+    <style name="Theme.SeniorHub.ExtraLargeText" parent="Theme.SeniorHub">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- DARK THEME -->
+    <!-- ========================================== -->
+
+    <!-- Dark Theme -->
+    <style name="Theme.SeniorHub.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+
+        <!-- Text and icon colors -->
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Primary brand color (used for buttons, highlights) -->
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary accent (used for icons, secondary buttons, highlights) -->
+        <item name="colorSecondary">@color/amber_400</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar and navigation bar colors -->
+        <item name="android:statusBarColor">@color/dark_surface</item>
+        <item name="android:navigationBarColor">@color/dark_surface</item>
+
+        <!-- Elevated surfaces (like cards, modals) -->
+        <item name="colorSurfaceVariant">@color/dark_gray</item>
+
+        <!-- For ripple and highlights -->
+        <item name="android:colorControlHighlight">@color/ripple_light</item>
+
+        <!-- For icons and secondary texts -->
+        <item name="android:textColorHint">@color/neutral_gray</item>
+    </style>
+
+
+    <!-- ========================================== -->
+    <!-- BUTTON STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Primary button style -->
+    <style name="Widget.SeniorHub.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height_large</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:padding">@dimen/button_padding_vertical</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:elevation">@dimen/elevation_medium</item>
+        <item name="rippleColor">@color/ripple_light</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Outlined button style -->
+    <style name="Widget.SeniorHub.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height_large</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:padding">@dimen/button_padding_vertical</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:elevation">@dimen/elevation_low</item>
+        <item name="rippleColor">@color/ripple_light</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Emergency button style -->
+    <style name="Widget.SeniorHub.Button.Emergency" parent="Widget.SeniorHub.Button">
+        <item name="android:backgroundTint">@color/emergency_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">@dimen/sos_button_size</item>
+        <item name="android:minWidth">@dimen/sos_button_size</item>
+        <item name="android:textSize">@dimen/text_sos</item>
+        <item name="android:elevation">@dimen/elevation_high</item>
+        <item name="cornerRadius">@dimen/sos_corner_radius</item>
+    </style>
+
+    <!-- Text button style -->
+    <style name="Widget.SeniorHub.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">@dimen/button_height_medium</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:padding">@dimen/button_padding_vertical</item>
+        <item name="rippleColor">@color/ripple_light</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Accessibility button style -->
+    <style name="Widget.SeniorHub.Button.Accessibility" parent="Widget.SeniorHub.Button">
+        <item name="android:backgroundTint">@color/accent_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:elevation">@dimen/elevation_high</item>
+    </style>
+
+    <!-- Large icon button style -->
+    <style name="Widget.SeniorHub.Button.LargeIcon" parent="Widget.SeniorHub.Button">
+        <item name="android:minHeight">@dimen/touch_target_xlarge</item>
+        <item name="android:minWidth">@dimen/touch_target_xlarge</item>
+        <item name="android:padding">@dimen/space_lg</item>
+        <item name="iconSize">@dimen/icon_size_large</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- INPUT FIELD STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Text input layout style -->
+    <style name="Widget.SeniorHub.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:minHeight">@dimen/input_field_height</item>
+        <item name="boxStrokeWidth">@dimen/input_field_border_width</item>
+        <item name="boxCornerRadiusTopStart">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/input_field_corner_radius</item>
+        <item name="hintTextColor">@color/primary_color</item>
+        <item name="boxStrokeColor">@color/primary_color</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- CARD STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Card style -->
+    <style name="Widget.SeniorHub.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:minHeight">@dimen/touch_target_min</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="contentPadding">@dimen/card_padding</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Emergency card style -->
+    <style name="Widget.SeniorHub.Card.Emergency" parent="Widget.SeniorHub.Card">
+        <item name="cardBackgroundColor">@color/emergency_red</item>
+        <item name="cardElevation">@dimen/card_elevation_high</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- TEXT APPEARANCE STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Headline styles -->
+    <style name="TextAppearance.SeniorHub.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">@dimen/text_headline_large</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance.SeniorHub.Headline2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Body text styles -->
+    <style name="TextAppearance.SeniorHub.Body1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.SeniorHub.Body2" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Caption styles -->
+    <style name="TextAppearance.SeniorHub.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- COMPONENT STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Progress bar style -->
+    <style name="Widget.SeniorHub.ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="android:layout_height">@dimen/progress_height_thick</item>
+        <item name="trackColor">@color/progress_background</item>
+        <item name="indicatorColor">@color/primary_color</item>
+    </style>
+
+    <!-- Switch style -->
+    <style name="Widget.SeniorHub.Switch" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="android:layout_width">@dimen/switch_width</item>
+        <item name="android:layout_height">@dimen/switch_height</item>
+        <item name="thumbTint">@color/primary_color</item>
+        <item name="trackTint">@color/divider_color</item>
+    </style>
+
+
+    <!-- Custom switch style for reminders -->
+    <style name="Widget.SeniorHub.Switch.Reminder" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="thumbTint">@drawable/switch_thumb</item>
+        <item name="trackTint">@drawable/switch_track</item>
+        <item name="android:scaleX">1.3</item>
+        <item name="android:scaleY">1.3</item>
+    </style>
+
+
+    <!-- Chip style -->
+    <style name="Widget.SeniorHub.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="android:layout_height">@dimen/button_height_medium</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.SeniorHub.MediumComponent</item>
+        <item name="chipBackgroundColor">@color/primary_light</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="chipSurfaceColor">@color/primary_light</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- BOTTOM NAVIGATION STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Bottom Navigation View style is defined in values/styles_bottom_nav.xml -->
+    
+    <!-- Bottom Navigation text appearances are defined in values/styles_bottom_nav.xml to avoid duplicates -->
+
+    <!-- ========================================== -->
+    <!-- DIALOG STYLES -->
+    <!-- ========================================== -->
+
+
+    <!-- Dialog style -->
+    <style name="Widget.SeniorHub.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:padding">@dimen/dialog_padding</item>
+    </style>
+
+    <!-- Alert dialog style -->
+    <style name="Widget.SeniorHub.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:padding">@dimen/dialog_padding</item>
+    </style>
+
+    <!-- Alert dialog theme -->
+    <style name="Theme.SeniorHub.AlertDialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorPrimary">@color/focus_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:colorAccent">@color/focus_color</item>
+        <item name="android:colorControlActivated">@color/focus_color</item>
+        <item name="android:colorControlHighlight">@color/focus_color</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/dialog_background</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- TOOLBAR STYLES -->
+    <!-- ========================================== -->
+
+    <!-- Toolbar style -->
+    <style name="Widget.SeniorHub.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:layout_height">@dimen/toolbar_height_large</item>
+        <item name="android:padding">@dimen/toolbar_padding</item>
+        <item name="titleTextAppearance">@style/TextAppearance.SeniorHub.Headline2</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- FAB STYLES -->
+    <!-- ========================================== -->
+
+    <!-- FAB style -->
+    <style name="Widget.SeniorHub.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:layout_width">@dimen/fab_size_large</item>
+        <item name="android:layout_height">@dimen/fab_size_large</item>
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="tint">@color/white</item>
+        <item name="android:elevation">@dimen/elevation_high</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- SHAPE APPEARANCE STYLES -->
+    <!-- ========================================== -->
+
+    <style name="ShapeAppearance.SeniorHub.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.SeniorHub.SmallComponent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_sm</item>
+    </style>
+
+    <style name="ShapeAppearance.SeniorHub.MediumComponent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_md</item>
+    </style>
+
+    <style name="ShapeAppearance.SeniorHub.LargeComponent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_lg</item>
+    </style>
+
+    <!-- ========================================== -->
+    <!-- LEGACY STYLES (for backward compatibility) -->
+    <!-- ========================================== -->
+
+    <!-- Legacy button styles -->
+    <style name="Widget.SeniorHub.AccessibilityButton" parent="Widget.SeniorHub.Button.Accessibility" />
+    <style name="Widget.SeniorHub.LargeIconButton" parent="Widget.SeniorHub.Button.LargeIcon" />
+
+    <!-- ========================================== -->
+    <!-- APP BAR AND POPUP OVERLAY STYLES -->
+    <!-- ========================================== -->
+
+    <!-- App Bar Overlay -->
+    <style name="Theme.SeniorHub.AppBarOverlay" parent="ThemeOverlay.Material3.ActionBar">
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <!-- Popup Overlay -->
+    <style name="Theme.SeniorHub.PopupOverlay" parent="ThemeOverlay.Material3.Light">
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <!-- DatePickerDialog Theme -->
+    <style name="Theme.SeniorHub.DatePickerDialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:colorAccent">@color/focus_blue</item>
+        <item name="android:colorControlActivated">@color/focus_blue</item>
+        <item name="android:colorControlHighlight">@color/focus_blue</item>
+    </style>
+
+    <!-- DatePickerDialog Custom Theme -->
+    <style name="DatePickerDialogTheme" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:colorAccent">@color/focus_blue</item>
+        <item name="android:colorControlActivated">@color/focus_blue</item>
+        <item name="android:colorControlHighlight">@color/senior_profile_light</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <!-- TimePickerDialog Custom Theme -->
+    <style name="TimePickerDialogTheme" parent="ThemeOverlay.Material3.Dialog">
+        <item name="colorPrimary">@color/focus_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:colorAccent">@color/focus_blue</item>
+        <item name="android:colorControlActivated">@color/focus_blue</item>
+        <item name="android:colorControlHighlight">@color/senior_profile_light</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@color/white"
+    android:stateListAnimator="@animator/card_lift_animator"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/card_elevation_high"
+    app:strokeColor="@color/senior_profile"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="3sp">
+
+        <!-- Header Section with Service Name and Type Badge (Always Visible) -->
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Service Icon -->
+            <ImageView
+                android:id="@+id/ivServiceIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/space_md"
+                android:contentDescription="Service icon"
+                android:importantForAccessibility="yes"
+                android:padding="@dimen/space_sm"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_government"
+                app:tint="@color/focus_color" />
+
+            <!-- Service Name and Type -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvServiceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/space_lg"
+                    android:contentDescription="@string/service_name_description"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:textColor="@color/senior_primary_text"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="bold"
+                    tools:text="Office for Senior Citizens Affairs (OSCA) - District 1 Annex I" />
+
+                <TextView
+                    android:id="@+id/tvServiceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:background="@drawable/rounded_badge_background"
+                    android:backgroundTint="@color/senior_profile"
+                    android:contentDescription="Service type badge"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:importantForAccessibility="yes"
+                    android:paddingHorizontal="@dimen/space_sm"
+                    android:paddingVertical="@dimen/space_xs"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="GOVERNMENT"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <!-- Expand/Collapse Icon -->
+            <ImageView
+                android:id="@+id/ivExpand"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Expand or collapse service details"
+                android:gravity="end"
+                android:importantForAccessibility="yes"
+                android:rotation="0"
+                android:src="@drawable/ic_chevron_down"
+                app:tint="@color/senior_primary_text" />
+
+        </LinearLayout>
+
+        <!-- Expandable Details Section -->
+        <LinearLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/senior_background"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <!-- Quick Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <!-- Address with Enhanced Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:padding="3dp"
+                    android:layout_marginBottom="10dp"
+                    app:strokeColor="@color/black">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:contentDescription="Location icon"
+                        android:importantForAccessibility="yes"
+                        android:src="@drawable/ic_location"
+                        app:strokeColor="@color/black"
+                        android:layout_marginEnd="15dp"
+                        app:tint="@color/focus_color" />
+
+                    <TextView
+                        android:id="@+id/tvServiceAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/service_address_description"
+                        android:fontFamily="sans-serif-medium"
+                        android:importantForAccessibility="yes"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="20sp"
+                        tools:text="G/F SP Building, Magallanes Street, Davao City" />
+
+                </LinearLayout>
+
+                <!-- Contact Info Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Phone -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/contact_item_background"
+                        android:padding="3dp"
+                        android:layout_marginEnd="5dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="Phone icon"
+                            android:importantForAccessibility="yes"
+                            android:src="@drawable/ic_phone"
+                            app:tint="@color/senior_health" />
+
+                        <TextView
+                            android:id="@+id/tvServicePhone"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Service phone number"
+                            android:fontFamily="sans-serif-medium"
+                            android:importantForAccessibility="yes"
+                            android:textColor="@color/senior_primary_text"
+                            android:textSize="19sp"
+                            tools:text="(082) 241-1000" />
+
+                    </LinearLayout>
+
+                    <!-- Email -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/contact_item_background"
+                        android:padding="3dp"
+                        android:layout_marginEnd="2dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="Email icon"
+                            android:importantForAccessibility="yes"
+                            android:src="@drawable/ic_email"
+                            app:tint="@color/senior_benefits" />
+
+                        <TextView
+                            android:id="@+id/tvServiceEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Service email address"
+                            android:fontFamily="sans-serif-medium"
+                            android:importantForAccessibility="yes"
+                            android:textColor="@color/senior_primary_text"
+                            android:textSize="19sp"
+                            tools:text="osca@davaocity.gov.ph" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Services Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <!-- Services Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:padding="8dp"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="Services icon"
+                        android:importantForAccessibility="yes"
+                        android:src="@drawable/ic_services"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="Services offered section"
+                        android:fontFamily="sans-serif-medium"
+                        android:importantForAccessibility="yes"
+                        android:text="Services Offered"
+                        android:textColor="@color/senior_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Services Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/services_content_background"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvServicesOffered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/services_offered_description"
+                        android:fontFamily="sans-serif-medium"
+                        android:importantForAccessibility="yes"
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="@color/senior_secondary_text"
+                        android:textSize="19sp"
+                        tools:text="• Senior Citizen ID Processing\n• Social Pension Assistance\n• Health Benefits Coordination\n• Community Programs" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Modern Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3">
+
+                <!-- Call Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCall"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="@color/senior_health_light"
+                    android:contentDescription="@string/call_button_description"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="@string/call"
+                    android:textColor="@color/health_green"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/ic_phone"
+                    app:iconGravity="textStart"
+                    app:iconPadding="2dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/health_green"
+                    app:iconTintMode="@color/health_green"
+                    app:strokeColor="@color/health_green"
+                    app:strokeWidth="2dp" />
+
+                <!-- Map Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMap"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="@color/senior_profile_light"
+                    android:contentDescription="@string/map_button_description"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="@string/map"
+                    android:textColor="@color/senior_profile"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/ic_map"
+                    app:iconGravity="textStart"
+                    app:iconPadding="2dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/senior_profile"
+                    app:strokeColor="@color/senior_profile"
+                    app:strokeWidth="2dp" />
+
+                <!-- Website Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWebsite"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:backgroundTint="@color/senior_benefits_light"
+                    android:contentDescription="@string/website_button_description"
+                    android:fontFamily="sans-serif-medium"
+                    android:importantForAccessibility="yes"
+                    android:text="@string/website"
+                    android:textColor="@color/senior_benefits"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/ic_website"
+                    app:iconGravity="textStart"
+                    app:iconPadding="2dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/senior_benefits"
+                    app:strokeColor="@color/senior_benefits"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

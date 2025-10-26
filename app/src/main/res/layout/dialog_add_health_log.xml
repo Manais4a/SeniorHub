@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Value"
+        android:minHeight="72dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHealthValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:minHeight="64dp"
+            android:padding="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Notes (Optional)"
+        android:minHeight="72dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHealthNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textSize="18sp"
+            android:minHeight="64dp"
+            android:padding="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
